@@ -5,11 +5,9 @@ import Footer from '../../components/Footer/Footer'
 const Home = () => {
     return (
         <div>
-            <Navbar />
-            <div className="main">
-
+            <div className="main p-40">
+                this is the home page
             </div>
-            <Footer />
         </div>
     )
 }
