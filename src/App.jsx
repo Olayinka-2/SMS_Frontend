@@ -12,6 +12,7 @@ import Login from './pages/Login/Login';
 import Academics from './pages/Academics/Academics';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import BlogDetail from './pages/Blog/BlogDetail';
 
 const App = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/news-event" element={<NewsOrEvent />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
 
