@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
@@ -15,6 +15,14 @@ const Blog = () => {
         { id: 8, title: "Best Books for Self-Improvement", author: "Emma Adams", date: "Jan 26, 2025", description: "Brief description of the blog...", content: "Full content of Blog 8...", image: "/blog-image8.jpg" },
         { id: 9, title: "How to Prepare for Exams", author: "Olivia Martinez", date: "Jan 28, 2025", description: "Brief description of the blog...", content: "Full content of Blog 9...", image: "/blog-image9.jpg" },
     ];
+
+    // Show only 4 blogs initially
+    const [visibleBlogs, setVisibleBlogs] = useState(4);
+
+    // Load more blogs when clicking the button
+    const handleLoadMore = () => {
+        setVisibleBlogs(blogs.length); // Show all blogs
+    };
 
     return (
         <div className="bg-gray-100">
@@ -35,7 +43,7 @@ const Blog = () => {
 
             {/* Blog List */}
             <section className="p-6 flex flex-col gap-6">
-                {blogs.map((blog, index) => (
+                {blogs.slice(0, visibleBlogs).map((blog, index) => (
                     <React.Fragment key={blog.id}>
                         <div
                             className="bg-white p-4 shadow-md cursor-pointer hover:shadow-lg transition"
@@ -47,8 +55,8 @@ const Blog = () => {
                             <p className="mt-2 text-gray-700">{blog.description}</p>
                         </div>
 
-                        {/* Add Subscribe Section After 4 Blogs */}
-                        {index === 3 && (
+                        {/* Show Subscribe Section After First 4 Blogs */}
+                        {index === 3 && visibleBlogs > 4 && (
                             <section className="p-6 bg-white text-center shadow-md">
                                 <h2 className="text-2xl font-semibold">Subscribe to Our Newsletter</h2>
                                 <p className="mt-2 text-gray-700">Get the latest updates directly to your inbox.</p>
@@ -67,9 +75,16 @@ const Blog = () => {
             </section>
 
             {/* Load More Blogs */}
-            <div className="flex justify-center my-6">
-                <button className="bg-gray-800 text-white px-6 py-3 rounded">See More Updates</button>
-            </div>
+            {visibleBlogs < blogs.length && (
+                <div className="flex justify-center my-6">
+                    <button
+                        onClick={handleLoadMore}
+                        className="bg-gray-800 text-white px-6 py-3 rounded hover:bg-gray-700 transition"
+                    >
+                        See More Updates
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
