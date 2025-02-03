@@ -5,19 +5,19 @@ const Blog = () => {
     const navigate = useNavigate();
 
     const blogs = [
-        { id: 1, title: "How to Improve Learning", author: "John Doe", date: "Jan 10, 2025", description: "Brief description of the blog...", content: "Full content of Blog 1...", image: "/blog-image1.jpg" },
-        { id: 2, title: "Top 5 Study Tips", author: "Jane Smith", date: "Jan 12, 2025", description: "Brief description of the blog...", content: "Full content of Blog 2...", image: "/blog-image2.jpg" },
-        { id: 3, title: "Why Education Matters", author: "Michael Brown", date: "Jan 15, 2025", description: "Brief description of the blog...", content: "Full content of Blog 3...", image: "/blog-image3.jpg" },
-        { id: 4, title: "Best Online Learning Platforms", author: "Emily White", date: "Jan 18, 2025", description: "Brief description of the blog...", content: "Full content of Blog 4...", image: "/blog-image4.jpg" },
-        { id: 5, title: "Time Management for Students", author: "James Wilson", date: "Jan 20, 2025", description: "Brief description of the blog...", content: "Full content of Blog 5...", image: "/blog-image5.jpg" },
-        { id: 6, title: "How to Stay Motivated", author: "Sarah Lee", date: "Jan 22, 2025", description: "Brief description of the blog...", content: "Full content of Blog 6...", image: "/blog-image6.jpg" },
-        { id: 7, title: "Effective Note-Taking Strategies", author: "David Clark", date: "Jan 24, 2025", description: "Brief description of the blog...", content: "Full content of Blog 7...", image: "/blog-image7.jpg" },
-        { id: 8, title: "Best Books for Self-Improvement", author: "Emma Adams", date: "Jan 26, 2025", description: "Brief description of the blog...", content: "Full content of Blog 8...", image: "/blog-image8.jpg" },
-        { id: 9, title: "How to Prepare for Exams", author: "Olivia Martinez", date: "Jan 28, 2025", description: "Brief description of the blog...", content: "Full content of Blog 9...", image: "/blog-image9.jpg" },
+        { id: 1, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 2, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 3, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 4, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 5, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 6, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 7, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 8, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
+        { id: 9, title: "Unlocking the Power of STEM Education: Fostering Creativity and Innovation in the Classroom", author: "Ndaloke", date: "Fri, Mar 8, 2024, 7:00 AM ", description: "In today's rapidly evolving world, STEM education plays a crucial role in preparing students for success in the 21st century.", content: "Full content of Blog 1...", image: "/blogImage.png" },
     ];
 
     // Show only 4 blogs initially
-    const [visibleBlogs, setVisibleBlogs] = useState(4);
+    const [visibleBlogs, setVisibleBlogs] = useState(10);
 
     // Load more blogs when clicking the button
     const handleLoadMore = () => {
