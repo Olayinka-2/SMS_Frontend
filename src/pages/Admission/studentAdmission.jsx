@@ -16,75 +16,72 @@ const StudentAdmission = () => {
         <div className="max-w-4xl p-8 bg-white">
             <h2 className="text-[24px] font-bold mb-4 text-[#252B42]">Student Info</h2>
             <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
-                {[
-                    "ad_number", "date", "class", "firstname", "midname", "lastname", "dob", "address", "email", "bumber", "pre_school"
-                ].map((field, index) => (
-                    <input
-                        key={index}
-                        type={field.includes("dob") || field.includes("date") ? "date" : "text"}
-                        name={field}
-                        placeholder={field.replace(/_/g, " ").toUpperCase()}
-                        onChange={handleChange}
-                        className="p-2 border border-[#989E99] rounded-md"
-                    />
-                ))}
-
+                <input type="text" name="ad_number" placeholder="ADMISSION NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="date" name="date" placeholder="DATE" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                    <option value="">Select Class</option>
+                    <option value="class1">Class 1</option>
+                    <option value="class2">Class 2</option>
+                    <option value="class3">Class 3</option>
+                </select>
+                <input type="text" name="firstname" placeholder="FIRST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="midname" placeholder="MIDDLE NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="lastname" placeholder="LAST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="date" name="dob" placeholder="DATE OF BIRTH" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                 <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-
+                <input type="text" name="address" placeholder="ADDRESS" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                 <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
                     <option value="">Select State</option>
                     <option value="state1">State 1</option>
                     <option value="state2">State 2</option>
                     <option value="state3">State 3</option>
                 </select>
-
+                <input type="email" name="email" placeholder="EMAIL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                 <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
                     <option value="">Select LGA</option>
                     <option value="lga1">LGA 1</option>
                     <option value="lga2">LGA 2</option>
                     <option value="lga3">LGA 3</option>
                 </select>
+                <input type="text" name="bumber" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="pre_school" placeholder="PREVIOUS SCHOOL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
 
                 <h3 className="text-xl font-bold col-span-2 mt-4">Guardian Information</h3>
-                {[
-                    "title", "fname", "middname", "lastname", "dob", "address", "email", "number", "quali", "occupation", "annual_income"
-                ].map((field, index) => (
-                    <input
-                        key={index}
-                        type={field.includes("dob") ? "date" : "text"}
-                        name={field}
-                        placeholder={field.replace(/_/g, " ").toUpperCase()}
-                        onChange={handleChange}
-                        className="p-2 border border-[#989E99] rounded-md"
-                    />
-                ))}
-
+                <input type="text" name="title" placeholder="TITLE" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="fname" placeholder="FIRST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="middname" placeholder="MIDDLE NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="lastname" placeholder="LAST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="date" name="dob" placeholder="DATE OF BIRTH" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                 <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-
+                <input type="text" name="address" placeholder="ADDRESS" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                 <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
                     <option value="">Select State</option>
                     <option value="state1">State 1</option>
                     <option value="state2">State 2</option>
                     <option value="state3">State 3</option>
                 </select>
-
                 <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
                     <option value="">Select LGA</option>
                     <option value="lga1">LGA 1</option>
                     <option value="lga2">LGA 2</option>
                     <option value="lga3">LGA 3</option>
                 </select>
-
+                <input type="email" name="email" placeholder="EMAIL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="number" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="number" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="number" placeholder="Qualification" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="number" placeholder="occu" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                <input type="text" name="number" placeholder="income" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                 <button type="submit" className=" bg-blue-600 text-white p-2 rounded-md mt-4">Submit</button>
             </form>
         </div>
