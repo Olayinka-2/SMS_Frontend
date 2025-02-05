@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AdmissionHeader from "../../components/AdmissionHeader/header";
 
 const StudentAdmission = () => {
     const [formData, setFormData] = useState({});
@@ -13,78 +14,139 @@ const StudentAdmission = () => {
     };
 
     return (
-        <div className="max-w-4xl p-8 bg-white">
-            <h2 className="text-[24px] font-bold mb-4 text-[#252B42]">Student Info</h2>
-            <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
-                <input type="text" name="ad_number" placeholder="ADMISSION NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="date" name="date" placeholder="DATE" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select Class</option>
-                    <option value="class1">Class 1</option>
-                    <option value="class2">Class 2</option>
-                    <option value="class3">Class 3</option>
-                </select>
-                <input type="text" name="firstname" placeholder="FIRST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="midname" placeholder="MIDDLE NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="lastname" placeholder="LAST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="date" name="dob" placeholder="DATE OF BIRTH" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="text" name="address" placeholder="ADDRESS" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select State</option>
-                    <option value="state1">State 1</option>
-                    <option value="state2">State 2</option>
-                    <option value="state3">State 3</option>
-                </select>
-                <input type="email" name="email" placeholder="EMAIL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select LGA</option>
-                    <option value="lga1">LGA 1</option>
-                    <option value="lga2">LGA 2</option>
-                    <option value="lga3">LGA 3</option>
-                </select>
-                <input type="text" name="bumber" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="pre_school" placeholder="PREVIOUS SCHOOL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+        <>
+            <AdmissionHeader title="Student Admission" />
+            <div className="w-[90%] px-14 py-2 bg-white">
+                <h2 className="text-[24.5px] font-bold mb-4 text-[#252B42]">Student Info</h2>
+                <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-y-4 gap-4">
+                    <label className="flex flex-col">Admission Number*
+                        <input type="text" name="ad_number" placeholder="471" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Admission Date*
+                        <input type="date" name="date" placeholder="DATE" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Class*
+                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select Class</option>
+                            <option value="class1">Class 1</option>
+                            <option value="class2">Class 2</option>
+                            <option value="class3">Class 3</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">First Name*
+                        <input type="text" name="firstname" placeholder="FIRST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Middle Name
+                        <input type="text" name="midname" placeholder="MIDDLE NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Last Name*
+                        <input type="text" name="lastname" placeholder="LAST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Date of Birth*
+                        <input type="date" name="dob" placeholder="DATE OF BIRTH" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Gender*
+                        <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">Address*
+                        <input type="text" name="address" placeholder="ADDRESS" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">State*
+                        <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select State</option>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <option value="state3">State 3</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">Email*
+                        <input type="email" name="email" placeholder="EMAIL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">LGA*
+                        <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select LGA</option>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <option value="lga3">LGA 3</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">Mobile Number*
+                        <input type="text" name="bumber" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Previous School*
+                        <input type="text" name="pre_school" placeholder="PREVIOUS SCHOOL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
 
-                <h3 className="text-xl font-bold col-span-2 mt-4">Guardian Information</h3>
-                <input type="text" name="title" placeholder="TITLE" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="fname" placeholder="FIRST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="middname" placeholder="MIDDLE NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="lastname" placeholder="LAST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="date" name="dob" placeholder="DATE OF BIRTH" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-                <input type="text" name="address" placeholder="ADDRESS" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select State</option>
-                    <option value="state1">State 1</option>
-                    <option value="state2">State 2</option>
-                    <option value="state3">State 3</option>
-                </select>
-                <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                    <option value="">Select LGA</option>
-                    <option value="lga1">LGA 1</option>
-                    <option value="lga2">LGA 2</option>
-                    <option value="lga3">LGA 3</option>
-                </select>
-                <input type="email" name="email" placeholder="EMAIL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="number" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="number" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="number" placeholder="Qualification" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="number" placeholder="occu" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <input type="text" name="number" placeholder="income" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
-                <button type="submit" className=" bg-blue-600 text-white p-2 rounded-md mt-4">Submit</button>
-            </form>
-        </div>
+                    <h3 className="text-xl font-bold col-span-2 mt-4">Parent/Guardian Info</h3>
+                    <label className="flex flex-col">Title*
+                        <input type="text" name="title" placeholder="TITLE" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">First Name*
+                        <input type="text" name="fname" placeholder="FIRST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Middle Name*
+                        <input type="text" name="middname" placeholder="MIDDLE NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Last Name*
+                        <input type="text" name="lastname" placeholder="LAST NAME" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Date of Birth*
+                        <input type="date" name="dob" placeholder="DATE OF BIRTH" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Gender*
+                        <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">Address*
+                        <input type="text" name="address" placeholder="ADDRESS" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">State*
+                        <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select State</option>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <option value="state3">State 3</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">LGA*
+                        <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
+                            <option value="">Select LGA</option>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <option value="lga3">LGA 3</option>
+                        </select>
+                    </label>
+                    <label className="flex flex-col">Email*
+                        <input type="email" name="email" placeholder="EMAIL" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Mobile Number*
+                        <input type="text" name="number" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Mobile Number*
+                        <input type="text" name="number" placeholder="MOBILE NUMBER" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Educational Qualification*
+                        <input type="text" name="number" placeholder="Qualification" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Occupation*
+                        <input type="text" name="number" placeholder="occu" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <label className="flex flex-col">Annual Income*
+                        <input type="text" name="number" placeholder="income" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
+                    </label>
+                    <button type="submit" className=" bg-[#09B451] text-[#001B07] p-1 rounded mt-4">Submit</button>
+                </form>
+            </div>
+        </>
     );
 };
 
