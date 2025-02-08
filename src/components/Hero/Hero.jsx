@@ -7,7 +7,8 @@ import heroIcon3 from '../../assets/heroIcon3.png';
 
 const Hero = () => {
   return (
-    <div className='container bg-gray mx-auto px-5 py-10'>
+    <div className='container bg-[#E8ECE9]
+ mx-auto px-5 py-10'>
       <div className='flex flex-col md:flex-row items-center justify-between'>
         <div className='text-center md:text-left md:w-1/2'>
           <h2 className='text-7xl font-bold'>
