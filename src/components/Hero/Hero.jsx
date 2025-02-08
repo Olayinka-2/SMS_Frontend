@@ -29,17 +29,17 @@ const Hero = () => {
         </div>
       </div>
       <div className='mt-9 grid grid-cols-1 md:grid-cols-3 gap-6'>
-        <div className='bg-white shadow-lg p-6 rounded-lg text-center'>
+        <div className='bg-green-500 shadow-lg p-6 rounded-lg text-center'>
           <img src={heroIcon} alt='icon' className='w-12 mx-auto  text-green-600' />
           <h3 className='text-xl font-semibold mt-4'>Expert Instructors</h3>
           <p className='text-gray-600 mt-2'>The gradual accumulation of information about atomic and small-scale behaviour...</p>
         </div>
-        <div className='bg-white shadow-lg p-6 rounded-lg text-center'>
+        <div className='bg-green-500 shadow-lg p-6 rounded-lg text-center'>
           <img src={heroIcon2} alt='icon' className='w-12 mx-auto  text-green-600' />
           <h3 className='text-xl font-semibold mt-4'>Training Courses</h3>
           <p className='text-gray-600 mt-2'>The gradual accumulation of information about atomic and small-scale behaviour...</p>
         </div>
-        <div className='bg-white shadow-lg p-6 rounded-lg text-center'>
+        <div className='bg-green-500 shadow-lg p-6 rounded-lg text-center'>
           <img src={heroIcon3} alt='icon' className='w-12 mx-auto  text-green-600' />
           <h3 className='text-xl font-semibold mt-4'>Expert Instructors</h3>
           <p className='text-gray-600 mt-2'>The gradual accumulation of information about atomic and small-scale behaviour...</p>
