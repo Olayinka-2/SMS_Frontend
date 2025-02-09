@@ -121,13 +121,19 @@ const StudentAdmission = () => {
                             <option value="class2">Katsina</option>
                         </select>
                     </label>
-                    <InputFields title="LGA*" placeholder="Select" />
-                    <InputFields title="Email*" placeholder="Email here" />
-                    <InputFields title="Mobile number*" placeholder="Mobile number" />
-                    <InputFields title="Mobile number*" placeholder="Mobile number" />
-                    <InputFields title="Educational Qualification*" placeholder="Educational Qualification" />
-                    <InputFields title="Occupation" placeholder="Occupation" />
-                    <InputFields title="Annual Income" placeholder="Educational Qualification" />
+                    <label className="flex text-[#151716] text-[14px] font-semibold flex-col">LGA*
+                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                            <option value="">Select</option>
+                            <option value="class1">lga</option>
+                            <option value="class2">lga</option>
+                        </select>
+                    </label>
+                    <InputFields title="Email*" inputType="email" placeholder="Email here" />
+                    <InputFields title="Mobile number*" inputType="text" placeholder="Mobile number" />
+                    <InputFields title="Mobile number*" inputType="text" placeholder="Mobile number" />
+                    <InputFields title="Educational Qualification*" inputType="text" placeholder="Educational Qualification" />
+                    <InputFields title="Occupation" inputType="text" placeholder="Occupation" />
+                    <InputFields title="Annual Income" inputType="text" placeholder="Educational Qualification" />
                     <button type="submit" className=" bg-[#09B451] text-[#001B07] p-1 rounded mt-7">Submit</button>
                 </form>
             </div>
