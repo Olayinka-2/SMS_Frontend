@@ -3,23 +3,15 @@ import { GoLocation } from "react-icons/go";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdMail } from "react-icons/md";
 import ContactForm from "../../components/Contact";
+import HeroSection from "../../components/HeroSection";
+import image from '/contactImage.png'
 
 
 const Contact = () => {
     return (
         <div className="">
             {/* Hero Section */}
-            <div className="relative h-[80vh] bg-[#001B07] items-center text-[#F5F5F5] flex text-right  justify-center">
-                <img
-                    src="/contactImage.png"
-                    alt="Contact Us"
-                    className="absolute inset-0 w-full h-full object-cover opacity-50"
-                />
-                <div className="relative text-justify p-18">
-                    <h1 className="text-[50px] font-bold">Contact Us</h1>
-                    <p className="mt-2 text-[24px]">Welcome to the WiSchool Contact Us page! Whether you have questions, feedback, or just want to say hello, we'd love to hear from you. Use the information below to get in touch with our team. We're here to help!</p>
-                </div>
-            </div>
+            <HeroSection title="Contact Us" image={image} text="Welcome to the WiSchool Contact Us page! Whether you have questions, feedback, or just want to say hello, we'd love to hear from you. Use the information below to get in touch with our team. We're here to help!" />
 
             {/* Three Column Section */}
             <div className="grid grid-cols-1 bg-[#A5FFB9] md:grid-cols-3 gap-6 p-8 px-20">

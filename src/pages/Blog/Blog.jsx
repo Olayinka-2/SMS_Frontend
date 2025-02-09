@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SubscribeSection from "../../components/SubscribeSection";
 import BlogSection from "../../components/BlogSection";
+import HeroSection from "../../components/HeroSection";
 
 const Blog = () => {
     const navigate = useNavigate();
@@ -33,19 +34,7 @@ const Blog = () => {
     return (
         <div className="">
             {/* Hero Section */}
-            <section className="relative h-[80vh] bg-[#001B07] text-white flex items-center">
-                <img
-                    src="/blogheroimage.png"
-                    alt="Blog Hero"
-                    className="absolute inset-0 w-full h-full object-cover opacity-50"
-                />
-                <div className="relative text-justify p-8">
-                    <h1 className="text-4xl font-bold">Blog</h1>
-                    <p className="mt-2 text-[24px]">
-                        Welcome to the WiSchool Blog! Explore our collection of articles, insights, and resources on education, student success, parenting tips, and more. Whether you're a student, parent, educator, or member of the community, you'll find valuable information and inspiration to support your journey in education.
-                    </p>
-                </div>
-            </section>
+            <HeroSection image="/blogheroimage.png" title="Blog" text="Welcome to the WiSchool Blog! Explore our collection of articles, insights, and resources on education, student success, parenting tips, and more. Whether you're a student, parent, educator, or member of the community, you'll find valuable information and inspiration to support your journey in education." />
 
             {/* Blog List */}
             <BlogSection />
