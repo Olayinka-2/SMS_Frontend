@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SubscribeSection from "../../components/SubscribeSection";
+import BlogSection from "../../components/BlogSection";
 
 const Blog = () => {
     const navigate = useNavigate();
@@ -41,37 +42,13 @@ const Blog = () => {
                 <div className="relative text-justify p-8">
                     <h1 className="text-4xl font-bold">Blog</h1>
                     <p className="mt-2 text-[24px]">
-                        Welcome to the WiSchool Blog! Explore our collection of articles, insights, and resources on education, student success, parenting tips, and more. Whether you're a student, parent, educator, or member of the community, you'll find valuable information and inspiration to support your journey in education..
+                        Welcome to the WiSchool Blog! Explore our collection of articles, insights, and resources on education, student success, parenting tips, and more. Whether you're a student, parent, educator, or member of the community, you'll find valuable information and inspiration to support your journey in education.
                     </p>
                 </div>
             </section>
 
             {/* Blog List */}
-            <section className=" m-auto flex mt-10 flex-col gap-6">
-                {blogs.slice(0, visibleBlogs).map((blog, index) => (
-
-                    <React.Fragment key={blog.id}>
-                        <div
-                            className="bg-white mx-6 flex gap-6 h-[300px] items- justify-center shadow-md cursor-pointer hover:shadow-lg transition"
-                            onClick={() => navigate(`/blog/${blog.id}`, { state: blog })}
-                        >
-                            <div className="w-[55%] h-full">
-                                <img src={blog.image} alt={blog.title} className="h-full  w-full object-cover" />
-                            </div>
-                            <div className="p-1 pt-10">
-                                <h3 className="text-xl text-[28px] font-semibold">{blog.title}</h3>
-                                <p className="mt-2 text-gray-700">{blog.description}</p>
-                                <p className="text-gray-600 mt-10 text-sm">By <span className="font-bold">{blog.author}</span>  {blog.date}</p>
-                            </div>
-                        </div>
-
-
-                        {index === 3 && visibleBlogs > 4 && (
-                            <SubscribeSection />
-                        )}
-                    </React.Fragment>
-                ))}
-            </section>
+            <BlogSection />
 
             {/* Load More Blogs */}
             {visibleBlogs < blogs.length && (
