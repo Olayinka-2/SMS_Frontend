@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InputFields = ({ title, placeholder }) => {
+const InputFields = ({ title, placeholder, inputType }) => {
     const [formData, setFormData] = useState({});
 
     const handleChange = (e) => {
@@ -15,8 +15,7 @@ const InputFields = ({ title, placeholder }) => {
         <label className="flex text-[#151716] text-[14px] font-semibold flex-col">
             {title}
             <input
-                type="text"
-                name="ad_number"
+                type={inputType}
                 placeholder={placeholder}
                 onChange={handleChange}
                 className="p-2 border border-[#989E99] mt-2 rounded-md"

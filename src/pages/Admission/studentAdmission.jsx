@@ -144,17 +144,17 @@ const StudentAdmission = () => {
                     <label className="flex flex-col">Annual Income*
                         <input type="text" name="number" placeholder="income" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md" />
                     </label> */}
-                    <InputFields title="Admission Number*" placeholder="471" />
-                    <InputFields title="Admission Date*" placeholder="DD/MM/YY" />
+                    <InputFields title="Admission Number*" inputType="text" placeholder="471" />
+                    <InputFields title="Admission Date*" inputType="date" placeholder="DD/MM/YY" />
                     <InputFields title="Class*" placeholder="Select" />
-                    <InputFields title="First Name*" placeholder="First Name" />
-                    <InputFields title="Middle Name" placeholder="Middle Name" />
-                    <InputFields title="Last Name*" placeholder="Last Name" />
+                    <InputFields title="First Name*" inputType="text" placeholder="First Name" />
+                    <InputFields title="Middle Name" inputType="text" placeholder="Middle Name" />
+                    <InputFields title="Last Name*" inputType="text" placeholder="Last Name" />
                     <InputFields title="Date of Birth" placeholder="DD/MM/YY" />
                     <InputFields title="Gender*" placeholder="Select" />
-                    <InputFields title="Address*" placeholder="Address" />
+                    <InputFields title="Address*" inputType="text" placeholder="Address" />
                     <InputFields title="State*" placeholder="Select" />
-                    <InputFields title="Email*" placeholder="Email here" />
+                    <InputFields title="Email*" inputType="email" placeholder="Email here" />
                     <InputFields title="LGA*" placeholder="Select" />
                     <InputFields title="Mobile number*" placeholder="Mobile number" />
                     <InputFields title="Previous School*" placeholder="Previous School" />
