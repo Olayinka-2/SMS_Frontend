@@ -60,7 +60,7 @@ const Blog = () => {
             <HeroSection image="/blogheroimage.png" title="Blog" text="Welcome to the WiSchool Blog! Explore our collection of articles, insights, and resources on education, student success, parenting tips, and more. Whether you're a student, parent, educator, or member of the community, you'll find valuable information and inspiration to support your journey in education." />
 
             {/* Blog List */}
-            <BlogSection />
+            <BlogSection show />
 
             {/* Load More Blogs */}
             {visibleBlogs < blogs.length && (

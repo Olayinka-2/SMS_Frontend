@@ -1,6 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import React from "react";
 import AdmissionHeader from "../../components/AdmissionHeader/header";
+import { HiDownload } from "react-icons/hi";
+import { BsUpload } from "react-icons/bs";
+import BlogSection from "../../components/BlogSection";
 
 const BlogDetail = () => {
   const location = useLocation();
@@ -25,27 +28,55 @@ const BlogDetail = () => {
     <>
       <AdmissionHeader page="Blog" title="Read" />
       <div className="p-12">
-        <h2 className="text-[#232A31] w-[80%] text-[38px] font-bold">
-          {blog.title}
-        </h2>
-      </div>
-      <div className="max-w-3xl mx-auto p-6">
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className="w-full h-64 object-cover rounded-md"
-        />
-        <h1 className="text-3xl font-bold mt-4">{blog.title}</h1>
-        <p className="text-gray-600 text-sm">
-          By {blog.author} | {blog.date}
-        </p>
-        <p className="mt-4 text-gray-700">{blog.content}</p>
-        <button
-          className="mt-6 bg-gray-800 text-white px-6 py-2 rounded"
-          onClick={() => navigate(-1)}
-        >
-          Back to Blogs
-        </button>
+        <div>
+          <h2 className="text-[#232A31] w-[90%] text-[42px] font-bold">
+            {blog.title}
+          </h2>
+          <h2 className="text-[#232A31] w-[90%] text-[42px] font-bold">
+            {blog.sub}
+          </h2>
+          <p className="text-[#5B636A] w-[80%] text-[24px]">
+            {blog.description}
+          </p>
+        </div>
+
+        <div className="flex justify-between items-center my-10 w-[600px]">
+          <div className="flex gap-4">
+            {/* <div className="border rounded-full flex p-2"> */}
+            <img
+              src="/imageAuthor.png"
+              className="w-12 h-12 border-2 border-[#A709B4] rounded-full"
+            />
+            {/* </div> */}
+            <div className="flex flex-col">
+              <p className="text-[#000000] text-[13.5px] font-bold">
+                {blog.author} News
+              </p>
+              <p className="text-[#232A31] text-[10px] font-bold">
+                News Editor
+              </p>
+              <p className="text-[#5B636A] text-[10px]">{blog.date}</p>
+            </div>
+          </div>
+          <div className="rounded-full bg-[#F5F8FA] p-4">
+            <BsUpload size="20" />
+          </div>
+        </div>
+
+        <div className="p-4">
+          <img
+            src={blog.image}
+            alt={blog.title}
+            className="w-[60%] h-[500px] rounded"
+          />
+          <p className="mt-4 text-[#1D2228] p-2 w-[90%] text-[18px]">
+            {blog.content}
+          </p>
+        </div>
+
+        <div className=" h-3 bg-[#09B451]"></div>
+        <h3 className="text-[#323533] text-[34px] font-bold">Latest Stories</h3>
+        <BlogSection show={false} />
       </div>
     </>
   );
