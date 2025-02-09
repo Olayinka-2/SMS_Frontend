@@ -15,7 +15,7 @@ const StudentAdmission = () => {
 
     return (
         <>
-            <AdmissionHeader title="Student Admission" />
+            <AdmissionHeader page="Admission" title="Student Admission" />
             <div className="w-[90%] px-14 py-2 bg-white">
                 <h2 className="text-[24.5px] font-bold mb-4 text-[#252B42]">Student Info</h2>
                 <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-y-4 gap-4">
