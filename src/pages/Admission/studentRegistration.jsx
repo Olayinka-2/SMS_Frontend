@@ -21,7 +21,7 @@ const StudentRegistration = () => {
                 <h2 className="text-[24.5px] font-bold mb-4 text-[#252B42]">Student Info</h2>
                 <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Class*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Class 1</option>
                             <option value="class2">Class 2</option>
@@ -34,7 +34,7 @@ const StudentRegistration = () => {
                     <InputFields title="Last Name*" placeholder="Last Name" />
                     <InputFields title="Date of Birth" inputType="date" placeholder="DD/MM/YY" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Gender*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Male</option>
                             <option value="class2">Female</option>
@@ -42,14 +42,14 @@ const StudentRegistration = () => {
                     </label>
                     <InputFields title="Address*" inputType="text" placeholder="Address" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">State*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Kano</option>
                             <option value="class2">Katsina</option>
                         </select>
                     </label>
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">LGA*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Kano</option>
                             <option value="class2">Katsina</option>

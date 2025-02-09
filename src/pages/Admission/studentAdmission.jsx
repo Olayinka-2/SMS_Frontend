@@ -20,51 +20,10 @@ const StudentAdmission = () => {
             <div className="w-[90%] px-14 py-2 bg-white">
                 <h2 className="text-[24.5px] font-bold mb-4 text-[#252B42]">Student Info</h2>
                 <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-y-4 gap-4">
-                    {/* <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                            <option value="">Select Class</option>
-                            <option value="class1">Class 1</option>
-                            <option value="class2">Class 2</option>
-                            <option value="class3">Class 3</option>
-                        </select>
-                        <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <select name="state" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                            <option value="">Select State</option>
-                            <option value="state1">State 1</option>
-                            <option value="state2">State 2</option>
-                            <option value="state3">State 3</option>
-                        </select>
-                        <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                            <option value="">Select LGA</option>
-                            <option value="lga1">LGA 1</option>
-                            <option value="lga2">LGA 2</option>
-                            <option value="lga3">LGA 3</option>
-                        </select>
-                        <select name="gender" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                            <option value="">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                            <option value="">Select State</option>
-                            <option value="state1">State 1</option>
-                            <option value="state2">State 2</option>
-                            <option value="state3">State 3</option>
-                        </select>
-                        <select name="lga" onChange={handleChange} className="p-2 border border-[#989E99] rounded-md">
-                            <option value="">Select LGA</option>
-                            <option value="lga1">LGA 1</option>
-                            <option value="lga2">LGA 2</option>
-                            <option value="lga3">LGA 3</option>
-                        </select> */}
                     <InputFields title="Admission Number*" inputType="text" placeholder="471" />
                     <InputFields title="Admission Date*" inputType="date" placeholder="DD/MM/YY" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Class*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Class 1</option>
                             <option value="class2">Class 2</option>
@@ -76,7 +35,7 @@ const StudentAdmission = () => {
                     <InputFields title="Last Name*" inputType="text" placeholder="Last Name" />
                     <InputFields title="Date of Birth" placeholder="DD/MM/YY" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Gender*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Male</option>
                             <option value="class2">Female</option>
@@ -84,7 +43,7 @@ const StudentAdmission = () => {
                     </label>
                     <InputFields title="Address*" inputType="text" placeholder="Address" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">State*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Kano</option>
                             <option value="class2">Katsina</option>
@@ -92,7 +51,7 @@ const StudentAdmission = () => {
                     </label>
                     <InputFields title="Email*" inputType="email" placeholder="Email here" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">LGA*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Kano</option>
                             <option value="class2">Katsina</option>
@@ -107,7 +66,7 @@ const StudentAdmission = () => {
                     <InputFields title="Last Name*" placeholder="Last Name" />
                     <InputFields title="Date of Birth" inputType="date" placeholder="DD/MM/YY" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Gender*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 text-[#7B8389] border border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Male</option>
                             <option value="class2">Female</option>
@@ -115,14 +74,14 @@ const StudentAdmission = () => {
                     </label>
                     <InputFields title="Address*" placeholder="Address" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">LGA*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">Kano</option>
                             <option value="class2">Katsina</option>
                         </select>
                     </label>
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">LGA*
-                        <select name="class" onChange={handleChange} className="p-2 border border-[#989E99] mt-2 rounded-md">
+                        <select name="class" onChange={handleChange} className="p-2 text-[#7B8389] border border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>
                             <option value="class1">lga</option>
                             <option value="class2">lga</option>
