@@ -18,7 +18,7 @@ const InputFields = ({ title, placeholder, inputType }) => {
                 type={inputType}
                 placeholder={placeholder}
                 onChange={handleChange}
-                className="p-2 border border-[#989E99] mt-2 rounded-md"
+                className="p-2 border outline-0 border-[#989E99] placeholder:text-[#7B8389] pl mt-2 rounded-md"
             />
         </label>
     );
