@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SubscribeSection from "../../components/SubscribeSection";
 
 const Blog = () => {
     const navigate = useNavigate();
@@ -66,18 +67,7 @@ const Blog = () => {
 
 
                         {index === 3 && visibleBlogs > 4 && (
-                            <section className="p-6 bg-[#E8ECE9] h-[50vh] flex flex-col items-center justify-center text-center w-[100%]">
-                                <h2 className="text-2xl font-semibold">Subscribe to Our Newsletter</h2>
-                                <p className="mt-2 text-gray-700">Get the latest updates directly to your inbox.</p>
-                                <div className="mt-4 w-[50%] bg-[#F9F9F9] flex justify-center">
-                                    <input
-                                        type="email"
-                                        placeholder="Your email"
-                                        className="p-3  rounded-l w-full"
-                                    />
-                                    <button className="bg-[#09B451] text-white p-3">Subscribe</button>
-                                </div>
-                            </section>
+                            <SubscribeSection />
                         )}
                     </React.Fragment>
                 ))}
