@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ContactForm from "../../components/Contact";
 
 const Admission = () => {
     return (
@@ -33,47 +34,7 @@ const Admission = () => {
             </div>
 
             {/* Send Us a Message */}
-            <div className="flex p-6 gap-10 items-center flex-col lg:flex-row md:flex-row">
-                <div className="p-6 mt-6 lg:w-[60%] md:w-[60%]">
-                    <h2 className="text-[#323533] text-[28px] font-bold">Send Us a Message</h2>
-                    <div className="border-t-6 border-[#f61122] w-16 my-4"></div>
-
-                    <form className="space-y-4 ">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <label>name<input type="text" placeholder="First Name" className="p-3 border rounded w-full" /></label>
-                            <label>name<input type="text" placeholder="Last Name" className="p-3 border rounded w-full" /></label>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <label>Phone Number
-                                <input type="tel" placeholder="Phone" className="p-3 border rounded w-full" /></label>
-                            <label>Email
-                                <input type="email" placeholder="Email" className="p-3 border rounded w-full" /></label>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <label>Select service
-                                <select className="p-3 border rounded w-full">
-
-                                    <option>Select a Service</option>
-                                    <option>Service 1</option>
-                                    <option>Service 2</option>
-                                </select>
-                            </label>
-                            <label>Appointment date
-                                <input type="date" className="p-3 border rounded w-full" /></label>
-                        </div>
-                        <label>Message
-                            <textarea placeholder="Type your message" className="p-3 border border-[#0093DF] rounded w-full h-42"></textarea></label>
-                        <div className="flex items-center gap-2">
-                            <input type="checkbox" className="w-4 h-4" />
-                            <label className="text-[#000000] text-[14px]">I accept the <span className=" underline">Terms</span></label>
-                        </div>
-                        <button className="bg-[#09B451] text-[#FFFFFF] text-[16px] py-[16px] px-[28px] rounded ">Submit</button>
-                    </form>
-                </div>
-                <div className=" md:w-[30%] lg:w-[30%]">
-                    <img src="/contactImage2.png" alt="IMAGE" />
-                </div>
-            </div>
+            <ContactForm title="Contact Us" />
         </div >
     );
 };
