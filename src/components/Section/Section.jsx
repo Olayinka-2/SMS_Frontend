@@ -11,9 +11,9 @@ const Section = () => {
   return (
     <div className='container bg-gray-400 mx-auto px-6 py-12 bg-white'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-green-600 font-bold'>
-        <h1 className='text-4xl text-black'>100+ <br className='text-black'/>Parents and Guardian</h1>
-        <h1 className='text-4xl text-black'>100+ <br className='text-black'/>Online Contents</h1>
-        <h1 className='text-4xl text-black'>25K+ <br className='text-black'/>Graduated Students</h1>
+        <h1 className='text-4xl text-purple-700'>100+ <br className='text-black'/>Parents and Guardian</h1>
+        <h1 className='text-4xl text-purple-700'>100+ <br className='text-black'/>Online Contents</h1>
+        <h1 className='text-4xl text-purple-700'>25K+ <br className='text-black'/>Graduated Students</h1>
       </div>
       
       <div className='flex flex-col md:flex-row items-center justify-between mt-12 gap-12'>
