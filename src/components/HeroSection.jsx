@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const HeroSection = ({ title, text, image, btn }) => {
     return (
-        <div className="relative h-[80vh] mt-15 bg-[#001B07] items-center text-[#F5F5F5] flex text-right  justify-center">
+        <div className="relative h-[80vh] sm:pb-15 mt-15 bg-[#001B07] items-center text-[#F5F5F5] flex text-right  justify-center">
             <img
                 src={image}
                 alt="Contact Us"
