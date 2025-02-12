@@ -11,7 +11,7 @@ import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Academics from './pages/Academics/Academics';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Footer from './Header/Footer/Footer';
 
 const App = () => {
   const location = useLocation();
