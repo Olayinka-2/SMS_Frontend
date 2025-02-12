@@ -14,7 +14,7 @@ const Contact = () => {
             <HeroSection title="Contact Us" image={image} text="Welcome to the WiSchool Contact Us page! Whether you have questions, feedback, or just want to say hello, we'd love to hear from you. Use the information below to get in touch with our team. We're here to help!" />
 
             {/* Three Column Section */}
-            <div className="grid grid-cols-1 bg-[#A5FFB9] md:grid-cols-3 gap-6 p-8 px-20">
+            <div className="grid grid-cols-1 bg-[#A5FFB9] md:grid-cols-3 gap-6 pt-8 pb-20 px-20">
                 <div className="p-6 h-40">
                     <div className="flex items-center gap-4">
                         <MdMail color="#09B451" size={38} />
