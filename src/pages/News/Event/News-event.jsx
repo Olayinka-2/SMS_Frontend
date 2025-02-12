@@ -19,7 +19,7 @@ const events = [
     month: 'March',
     date: '15',  
     title: 'Parent-Teacher Conference',  
-    description: 'Description: Meet with your child\'s teachers to discuss their progress, goals and academic achievements. This is a valuable opportunity for parents to connect with teachers and support their child\'s learning journey',  
+    description: 'Description: Meet with your child\'s teachers to discuss their progress, goals and academic achievements. This is a valuable opportunity for parents to connect with teachers and support their child\'s learning journey.',  
     time: 'Time: 9:00 AM - 12:00PM'
   }, 
   {  
