@@ -43,7 +43,7 @@ const NewsEvents = () => {
             <h1 className="text-5xl font-bold mb-4" style={{display: 'flex', justifyContent: 'flex-start' }}>News & Events</h1>
             <div style={{display: 'grid', gridTemplateColumns: '1100px'}}>
             <h2 className="text-2xl" style={{display: 'flex', justifyContent: 'flex-start',}}>  
-              Welcome to the WiSchol News & Events page! Stay up-to-date with the latest happenings, announcements, and exciting events from our school community. whether it's academic achievements, cultural celebrations, or extracurricular activities. you'll find all the news and updates right here.  
+              Welcome to the WiSchool News & Events page! Stay up-to-date with the latest happenings, announcements, and exciting events from our school community. whether it's academic achievements, cultural celebrations, or extracurricular activities. you'll find all the news and updates right here.  
             </h2> 
             </div> 
              
@@ -58,7 +58,7 @@ const NewsEvents = () => {
 
           <div >
             {/* <div style={{backgroundImage: 'url(https://res.cloudinary.com/dtz4rslmb/image/upload/v1738831296/loupe_1_ijxbmh.png), norepeat', height: '3px'}}></div> */}
-          <input type="text"  placeholder='Search for events' className='text-[16px] border-gray-600 pr-20 pb-1.5 pl-1' style={{ border: '1px solid gray', paddingTop: '5px',  paddingLeft: '3px'}} />
+          <input type="text"  placeholder='Search for events' className='text-[16px] border-gray-600 pr-20 pb-1.5 pl-1' style={{ border: '1px solid gray', paddingTop: '5px',  }} />
             <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">  
               View All Events  
             </button>  
