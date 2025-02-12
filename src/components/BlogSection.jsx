@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import SubscribeSection from "../../components/SubscribeSection";
-import BlogSection from "../../components/BlogSection";
-import HeroSection from "../../components/HeroSection";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import SubscribeSection from './SubscribeSection';
 
-const Blog = () => {
+
+
+const BlogSection = ({ show }) => {
+
     const navigate = useNavigate();
 
     const blogs = [
@@ -55,26 +56,35 @@ const Blog = () => {
     let index;
 
     return (
-        <div className="">
-            {/* Hero Section */}
-            <HeroSection image="/blogheroimage.png" title="Blog" text="Welcome to the WiSchool Blog! Explore our collection of articles, insights, and resources on education, student success, parenting tips, and more. Whether you're a student, parent, educator, or member of the community, you'll find valuable information and inspiration to support your journey in education." />
+        <section className="m-auto flex my-10 flex-col gap-6">
+            {blogs.slice(0, visibleBlogs).map((blog, index) => (
 
-            {/* Blog List */}
-            <BlogSection show />
-
-            {/* Load More Blogs */}
-            {visibleBlogs < blogs.length && (
-                <div className="flex justify-center p-4 pb-6 bg-[#E8ECE9]">
-                    <button
-                        onClick={handleLoadMore}
-                        className="bg-[#FFFFFF] text-[#09B451] px-6 py-3 rounded  transition"
+                <React.Fragment key={blog.id}>
+                    <div
+                        className="bg-white w-[90%] mx-auto flex gap-6 h-[300px] items- justify-center shadow-md cursor-pointer hover:shadow-lg transition"
+                        onClick={() => navigate(`/blog/${blog.id}`, { state: blog })}
                     >
-                        See More Updates
-                    </button>
-                </div>
-            )}
-        </div>
-    );
-};
+                        <div className="w-[55%] h-full">
+                            <img src={blog.image} alt={blog.title} className="h-full  w-full object-cover" />
+                        </div>
+                        <div className="p-1 pt-10">
+                            <h3 className="text-[#2B2D32] text-[28px] font-bold">{blog.title}</h3>
+                            <p className="mt-8 text-[15px] w-[86%] text-[#56585C]">{blog.description}</p>
+                            <p className="text-[#989E99] mt-6 text-sm">By <span className="font-bold">{blog.author}</span>  {blog.date}</p>
+                        </div>
+                    </div>
 
-export default Blog;
+
+                    {index === 3 && visibleBlogs > 4 && (
+                        <div className={`${show ? '' : 'hidden'}`}>
+                            <SubscribeSection show={true} />
+                        </div>
+
+                    )}
+                </React.Fragment>
+            ))}
+        </section>
+    )
+}
+
+export default BlogSection
