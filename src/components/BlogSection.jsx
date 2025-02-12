@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import SubscribeSection from './SubscribeSection';
+import './blogSection.css'
 
 
 
@@ -61,10 +62,10 @@ const BlogSection = ({ show }) => {
 
                 <React.Fragment key={blog.id}>
                     <div
-                        className="bg-white w-[90%] mx-auto flex gap-6 h-[300px] items- justify-center shadow-md cursor-pointer hover:shadow-lg transition"
+                        className="bg-white blogsection w-[90%] mx-auto flex gap-6 h-[300px] items- justify-center shadow-md cursor-pointer hover:shadow-lg transition"
                         onClick={() => navigate(`/blog/${blog.id}`, { state: blog })}
                     >
-                        <div className="w-[55%] h-full">
+                        <div className="w-[55%] imageSection h-full">
                             <img src={blog.image} alt={blog.title} className="h-full  w-full object-cover" />
                         </div>
                         <div className="p-1 pt-10">
