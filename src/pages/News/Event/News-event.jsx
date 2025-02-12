@@ -58,7 +58,7 @@ const NewsEvents = () => {
 
           <div >
             {/* <div style={{backgroundImage: 'url(https://res.cloudinary.com/dtz4rslmb/image/upload/v1738831296/loupe_1_ijxbmh.png), norepeat', height: '3px'}}></div> */}
-          <input type="text"  placeholder='Search for events' className='text-[16px] border-gray-600 pr-20 pb-1.5' style={{ border: '1px solid gray', paddingTop: '5px',  paddingLeft: '3px'}} />
+          <input type="text"  placeholder='Search for events' className='text-[16px] border-gray-600 pr-20 pb-1.5 pl-1' style={{ border: '1px solid gray', paddingTop: '5px',  paddingLeft: '3px'}} />
             <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">  
               View All Events  
             </button>  
