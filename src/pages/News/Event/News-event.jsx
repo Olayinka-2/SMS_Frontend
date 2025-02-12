@@ -74,7 +74,7 @@ const NewsEvents = () => {
             {events.map((event, index) => (  
 
               <div key={index} className="flex items-start  border-gray-200 rounded-lg shadow-sm pt-7 pb-7">  
-                <div className="mr-4" style={{paddingRight: '10px',paddingLeft: '17px'}}>  
+                <div className='pr-[10px] pl-[17px] mr-4' >  
                   <p className="text-[13px] pl-1.5">{event.month}</p>  
                   <span className="text-4xl font-semibold pl-2">{event.date}</span> 
                 </div>  
