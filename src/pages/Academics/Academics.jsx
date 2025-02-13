@@ -7,6 +7,7 @@ import Sec2 from "../../assets/Sec2.png";
 import Tutor1 from "../../assets/Tutor1.png";
 import Tutor2 from "../../assets/Tutor2.png";
 import Tutor3 from "../../assets/Tutor3.png";
+import HeroSection from "../../components/HeroSection";
 
 const Academics = () => {
   return (
@@ -14,7 +15,7 @@ const Academics = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div
+      {/* <div
         className="relative bg-cover bg-center h-[250px] md:h-[350px] flex items-center justify-start text-white px-6 md:px-16"
         style={{ backgroundImage: `url(${AboutImg})` }}
       >
@@ -28,7 +29,8 @@ const Academics = () => {
             Explore our offerings below
           </h2>
         </div>
-      </div>
+      </div> */}
+      <HeroSection title="Academics" text="At WiSchool, we're committed to providing a dynamic and enriching academic experience that prepares students for success." image={AboutImg} />
 
       {/* Primary School Curriculum */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center gap-12">
