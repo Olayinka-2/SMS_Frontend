@@ -7,6 +7,7 @@ import Tutor1 from '../../assets/Tutor1.png';
 import Tutor2 from '../../assets/Tutor2.png';
 import Tutor3 from '../../assets/Tutor3.png';
 import AboutImg from '../../assets/About.png';
+import HeroSection from '../../components/HeroSection';
 
 const About = () => {
     return (
@@ -14,18 +15,19 @@ const About = () => {
             <Navbar />
 
             {/* Hero Section with Background Image */}
-            <div
-    className="relative bg-cover bg-center h-[250px] md:h-[350px] flex items-center justify-start text-white px-6 md:px-16 text-left"
-    style={{ backgroundImage: `url(${AboutImg})` }}
->
-    <div className=" bg-opacity-60 w-full h-full absolute top-0 left-0"></div>
-    <div className="relative z-10 max-w-2xl">
-        <h1 className="text-3xl md:text-5xl font-bold">About Us</h1>
-        <p className="mt-2 md:mt-4 text-sm md:text-lg">
-            At WiSchool, we provide a nurturing and inclusive learning environment where every student thrives academically, socially, and emotionally.
-        </p>
-    </div>
-</div>
+            {/* <div
+                className="relative bg-cover bg-center h-[250px] md:h-[350px] flex items-center justify-start text-white px-6 md:px-16 text-left"
+                style={{ backgroundImage: `url(${AboutImg})` }}
+            >
+                <div className=" bg-opacity-60 w-full h-full absolute top-0 left-0"></div>
+                <div className="relative z-10 max-w-2xl">
+                    <h1 className="text-3xl md:text-5xl font-bold">About Us</h1>
+                    <p className="mt-2 md:mt-4 text-sm md:text-lg">
+                        At WiSchool, we provide a nurturing and inclusive learning environment where every student thrives academically, socially, and emotionally.
+                    </p>
+                </div>
+            </div> */}
+            <HeroSection title="About Us" text="At WiSchool, we provide a nurturing and inclusive learning environment where every student thrives academically, socially, and emotionally." image={AboutImg} />
 
 
             {/* Mission/Vision Section */}
