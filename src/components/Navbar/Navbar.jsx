@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
+import './Navbar.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaReact, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
-
+ 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 

@@ -17,9 +17,9 @@ const StudentAdmission = () => {
     return (
         <>
             <AdmissionHeader page="Admission" title="Student Admission" />
-            <div className="w-[90%] px-14 py-2 bg-white">
+            <div className="lg:w-[90%] mt-8 px-14 py-2 bg-white">
                 <h2 className="text-[24.5px] font-bold mb-4 text-[#252B42]">Student Info</h2>
-                <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-y-4 gap-4">
+                <form onSubmit={handleSubmit} className="lg:grid md:grid grid-cols-2 gap-y-4 gap-4">
                     <InputFields title="Admission Number*" inputType="text" placeholder="471" />
                     <InputFields title="Admission Date*" inputType="date" placeholder="DD/MM/YY" />
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Class*
@@ -93,7 +93,7 @@ const StudentAdmission = () => {
                     <InputFields title="Educational Qualification*" inputType="text" placeholder="Educational Qualification" />
                     <InputFields title="Occupation" inputType="text" placeholder="Occupation" />
                     <InputFields title="Annual Income" inputType="text" placeholder="Educational Qualification" />
-                    <button type="submit" className=" bg-[#09B451] text-[#001B07] p-1 rounded mt-7">Submit</button>
+                    <button type="submit" className=" bg-[#09B451] text-[#001B07] sm:p-4 lg:p-1 md:p-1 rounded mt-7">Submit</button>
                 </form>
             </div>
         </>

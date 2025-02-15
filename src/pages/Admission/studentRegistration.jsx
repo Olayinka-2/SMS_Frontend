@@ -17,9 +17,9 @@ const StudentRegistration = () => {
     return (
         <>
             <AdmissionHeader page="Admission" title="Student Registration" />
-            <div className="w-[90%] flex flex-col px-14 p-6">
+            <div className="lg:w-[90%] mt-4 flex flex-col px-14 p-6">
                 <h2 className="text-[24.5px] font-bold mb-4 text-[#252B42]">Student Info</h2>
-                <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="lg:grid md:grid grid-cols-2 gap-4">
                     <label className="flex text-[#151716] text-[14px] font-semibold flex-col">Class*
                         <select name="class" onChange={handleChange} className="p-2 border text-[#7B8389] border-[#989E99] mt-2 rounded-md">
                             <option value="">Select</option>

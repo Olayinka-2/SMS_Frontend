@@ -1,6 +1,6 @@
 // tailwind.config.js  
 module.exports = {  
-    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],  
+    content: ["./src//*.{js,jsx,ts,tsx}", "./public/index.html"],  
     theme: {  
       extend: {},  
     },  
@@ -9,7 +9,7 @@ module.exports = {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"], // Ensures Tailwind scans JSX files
+  content: ["./src//*.{js,jsx,ts,tsx}"], // Ensures Tailwind scans JSX files
   theme: {
     extend: {
       fontFamily: {
@@ -19,4 +19,3 @@ export default {
   },
   plugins: [],
 };
-

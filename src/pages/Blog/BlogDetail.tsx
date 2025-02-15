@@ -40,7 +40,7 @@ const BlogDetail = () => {
           </p>
         </div>
 
-        <div className="flex justify-between items-center my-10 w-[600px]">
+        <div className="flex justify-between items-center my-10 lg:w-[600px] md:w-[600px] sm:w-[60%]">
           <div className="flex gap-4">
             {/* <div className="border rounded-full flex p-2"> */}
             <img
@@ -67,11 +67,9 @@ const BlogDetail = () => {
           <img
             src={blog.image}
             alt={blog.title}
-            className="w-[60%] h-[500px] rounded"
+            className="lg:w-[600px] md:w-[600px] h-[500px] rounded"
           />
-          <p className="mt-4 text-[#1D2228] p-2 w-[90%] text-[18px]">
-            {blog.content}
-          </p>
+          <p className="mt-4 text-[#1D2228]  text-[18px]">{blog.content}</p>
         </div>
 
         <div className=" h-3 bg-[#09B451]"></div>
