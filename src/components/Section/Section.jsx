@@ -10,11 +10,20 @@ import SubscribeSection from '../SubscribeSection';
 
 const Section = () => {
   return (
-    <div className='container  mx-auto bg-white'>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-green-600 font-bold'>
-        <h1 className='text-4xl text-purple-700'>100+ <br className='text-black' />Parents and Guardian</h1>
-        <h1 className='text-4xl text-purple-700'>100+ <br className='text-black' />Online Contents</h1>
-        <h1 className='text-4xl text-purple-700'>25K+ <br className='text-black' />Graduated Students</h1>
+    <div className='container mt-20 mx-auto bg-white'>
+      <div className='grid grid-cols-1 md:grid-cols-3 md:px-36 text-center text-green-600 font-bold'>
+        <div>
+          <h1 className='text-[60px] text-[#A709B4]'>100+</h1>
+          <p className='text-[#323533] text-[16px]'>Parents and Guardian</p>
+        </div>
+        <div>
+          <h1 className='text-[60px] text-[#A709B4]'>100+</h1>
+          <p className='text-[#323533] text-[16px]'>Online Contents</p>
+        </div>
+        <div>
+          <h1 className='text-[60px] text-[#A709B4]'>+25k</h1>
+          <p className='text-[#323533] text-[16px]'>Graduated Students</p>
+        </div>
       </div>
 
       <div className='flex flex-col md:flex-row items-center justify-between mt-12 gap-12'>
