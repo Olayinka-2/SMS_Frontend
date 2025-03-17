@@ -6,10 +6,11 @@ import Sec2 from '../../assets/Sec2.png';
 import Tutor1 from '../../assets/Tutor1.png';
 import Tutor2 from '../../assets/Tutor2.png';
 import Tutor3 from '../../assets/Tutor3.png';
+import SubscribeSection from '../SubscribeSection';
 
 const Section = () => {
   return (
-    <div className='container  mx-auto px-6 py-12 bg-white'>
+    <div className='container  mx-auto bg-white'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-green-600 font-bold'>
         <h1 className='text-4xl text-purple-700'>100+ <br className='text-black' />Parents and Guardian</h1>
         <h1 className='text-4xl text-purple-700'>100+ <br className='text-black' />Online Contents</h1>
@@ -85,15 +86,19 @@ const Section = () => {
       </div>
 
 
-      {/* Newsletter Section */}
-      <div className='mt-16 text-center bg-[#E8ECE9] text-white py-12 rounded-lg'>
-        <h1 className='text-4xl text-green-500 font-bold'>Newsletter</h1>
-        <p className='text-lg text-black mt-2'>Subscribe to get the latest updates</p>
-        <div className='mt-6 flex flex-col md:flex-row justify-center items-center gap-4'>
-          <input type='text' placeholder='Email' className='px-6 py-3 rounded-md bg-white text-gray-700 w-72' />
-          <button className='bg-green-600 text-black px-8 py-3 rounded-md text-lg font-bold hover:bg-gray-200 transition duration-300'>Subscribe</button>
+
+      <section className={`bg-[#E8ECE9] mt-12 flex h-[50vh] py-52  flex-col items-center justify-center text-center w-[100%]`}>
+        <p className='text-[#09B451] text-[16px] font-semibold'>Newsletter</p>
+        <h2 className="text-[25px] py-4 mb-4 text-[#001B07] font-bold">Subscribe to Our Newsletter</h2>
+        <div className="mt-4 w-[50%] rounded bg-[#F9F9F9] flex justify-center">
+          <input
+            type="email"
+            placeholder="Your email"
+            className="p-3 outline-0 rounded-l w-full"
+          />
+          <button className="bg-[#09B451] text-white p-3">Subscribe</button>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
