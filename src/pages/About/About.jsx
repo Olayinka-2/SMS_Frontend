@@ -10,6 +10,19 @@ import AboutImg from '../../assets/About.png';
 import HeroSection from '../../components/HeroSection';
 import { RedLine } from '../../components/RedLine';
 
+
+
+const tutorData = [
+    { name: 'John Doe', subject: 'Qualification', image: Tutor1 },
+    { name: 'Julian Jameson', subject: 'Qualification', image: Tutor3 },
+    { name: 'Julian Jameson', subject: 'Qualification', image: "user-cover-3.png" },
+    { name: 'Julian Jameson', subject: 'Profession', image: Tutor2 },
+    { name: 'Julian Jameson', subject: 'Qualification', image: Tutor1 },
+    { name: 'Julian Jameson', subject: 'Qualification', image: Tutor3 },
+    { name: 'Julian Jameson', subject: 'Qualification', image: "user-cover-3.png" },
+    { name: 'Julian Jameson', subject: 'Profession', image: Tutor2 },
+]
+
 const About = () => {
     return (
         <>
@@ -75,17 +88,19 @@ const About = () => {
             </div>
 
             {/* Faculty & Staff Section */}
-            <div className="container mx-auto px-6 py-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-green-700 text-center">Faculty & Staff</h2>
-                <p className="text-gray-600 text-center mt-2 text-sm md:text-base">
+            <div className="container mx-auto md:px-26 py-12">
+                <h2 className="text-2xl md:text-[22px] font-bold text-[#252B42] text-left">Faculty & Staff</h2>
+                <p className="text-[#737373] text-left text-sm mt-2 ">
                     Meet the dedicated educators who make WiSchool a vibrant and supportive learning community.
                 </p>
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {[Tutor1, Tutor2, Tutor3, Tutor1, Tutor2, Tutor3].map((tutor, index) => (
-                        <div key={index} className="bg-white shadow-lg rounded-lg p-4 text-center">
-                            <img src={tutor} alt="staff" className="w-[80px] md:w-[100px] mx-auto rounded-full" />
-                            <h3 className="text-lg font-semibold mt-2 text-green-700">Tutor Name</h3>
-                            <p className="text-gray-600 text-sm">Subject/Role</p>
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-1 gap-y-4">
+                    {tutorData.map((tutor, index) => (
+                        <div key={index} className="bg-white shadow-lg rounded-2xl w-[220px] text-center">
+                            <img src={tutor.image} alt="staff" className="mx-auto  rounded-t-2xl w-full" />
+                            <div className='p-5'>
+                                <h3 className="text-[16px] font-bold  text-[#09B451]">{tutor.name}</h3>
+                                <p className="text-[#737373] text-[13px]">{tutor.subject}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
