@@ -10,6 +10,13 @@ import Tutor3 from "../../assets/Tutor3.png";
 import HeroSection from "../../components/HeroSection";
 import { RedLine } from "../../components/RedLine";
 
+const tutorData = [
+  { name: 'John Doe', subject: 'Profession', image: Tutor1 },
+  { name: 'Julian Jameson', subject: 'Profession', image: Tutor3 },
+  { name: 'Julian Jameson', subject: 'Profession', image: "user-cover-3.png" },
+  { name: 'Julian Jameson', subject: 'Profession', image: Tutor2 },
+]
+
 const Academics = () => {
   return (
     <>
@@ -95,24 +102,26 @@ const Academics = () => {
 
       {/* Faculty Profiles */}
       <div className="py-12 px-6 md:px-12 text-left">
-        <h1 className="text-3xl font-bold text-green-600">Faculty Profiles</h1>
-        <p className="text-gray-700 font-semibold text-lg mt-2 max-w-2xl">
-          Meet our passionate educators dedicated to inspiring students.
+        <h2 className="text-2xl md:text-[22px] font-bold text-[#252B42] text-left">Faculty Profiles</h2>
+        <p className="text-[#737373] text-left text-sm mt-2 ">
+          Meet the dedicated educators who make WiSchool a vibrant and supportive learning community.
         </p>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {[Tutor1, Tutor2, Tutor3, Tutor1].map((tutor, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg p-4 text-center">
-              <img src={tutor} alt="Tutor" className="w-full rounded-lg mb-3" />
-              <h1 className="text-xl font-semibold text-green-600">Julien Berger</h1>
-              <h2 className="text-md text-gray-700">Senior Educator</h2>
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-1 gap-y-4">
+          {tutorData.map((tutor, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-2xl w-[220px] text-center">
+              <img src={tutor.image} alt="staff" className="mx-auto  rounded-t-2xl w-full" />
+              <div className='p-5'>
+                <h3 className="text-[16px] font-bold  text-[#09B451]">{tutor.name}</h3>
+                <p className="text-[#737373] text-[13px]">{tutor.subject}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Academic Resources */}
-      <div className="py-12 px-6 md:px-12 flex flex-col md:flex-row items-center gap-12">
+      <div className="py-12 px-6 md:px-12 flex flex-col md:flex-row items-center gap-1">
         <div className="text-left md:w-1/2 space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-green-600">Academic Resources</h2>
           <p className="text-gray-700 text-3xl">
