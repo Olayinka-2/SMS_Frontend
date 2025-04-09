@@ -26,7 +26,7 @@ const Academics = () => {
             At WiSchool, our primary school curriculum is designed to provide a strong foundation for academic success while nurturing students' curiosity, creativity, and love for learning. Our holistic approach integrates core subjects with hands-on learning experiences and character development initiatives
           </p>
           <h3 className="text-[22px] font-bold text-[#026229]">Core Subjects</h3>
-          <ul className="list-disc list-inside text-[#737373] text-[16px]">
+          <ul className="list-disc text-[#737373] text-[16px]">
             <li>Language Arts</li>
             <li>Mathematics</li>
             <li>Science</li>
@@ -55,19 +55,41 @@ const Academics = () => {
       </div>
 
       {/* Secondary School Curriculum -  */}
-      <div className="bg-gray-50 py-12 px-6 md:px-12 flex flex-col md:flex-row-reverse items-center gap-12">
+      <div className=" py-12 px-6 md:px-12 flex flex-col md:flex-row-reverse items-center gap-12">
         <div className="text-left md:w-1/2 space-y-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-green-600">Secondary School Curriculum</h1>
-          <p className="text-gray-700 leading-relaxed">
-            Our secondary program prepares students for higher education with a rigorous and inquiry-based approach.
+          <h1 className="text-3xl md:text-[28px] font-bold text-[#323533]">Secondary School Curriculum</h1>
+          <RedLine />
+          <p className="text-[#737373] text-[13.5px]">
+            In our secondary school program, WiSchool offers a rigorous academic curriculum that prepares students for higher education and future careers. Our comprehensive approach emphasizes critical thinking, inquiry-based learning, and real-world application of knowledge
           </p>
-          <h3 className="text-2xl font-semibold text-gray-800">Advanced Placement (AP) & Honors</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Opportunities to earn college credits with AP courses in Calculus, Literature, Biology, and more.
-          </p>
+          <h3 className="text-[22px] font-bold text-[#026229]">Core Subjects</h3>
+          <ul className="list-disc text-[#737373] text-[14px]">
+            <li>English Language and Literature</li>
+            <li>Mathematics</li>
+            <li>Science: Explores advanced scientific principles and methodologies through biology, chemistry, physics, and environmental science.</li>
+            <li>Social Sciences: Analyzes historical events, political systems, economic theories, and societal issues through courses in history, geography, economics, and sociology.</li>
+            <li>Foreign Languages: Develops proficiency in a second language through courses in language acquisition, literature, and culture.</li>
+            <li>Electives: Offers a wide range of elective courses to cater to students' interests and career goals, such as computer science, fine arts, business, and psychology</li>
+          </ul>
+          <h3 className="text-[22px] font-bold text-[#026229]">Advanced Placement (AP) and Honors Courses</h3>
+          <ul className="list-disc  text-[#737373] text-[15px] space-y-1">
+            <li>Provides opportunities for motivated students to pursue advanced coursework and earn college credit through AP courses in subjects such as calculus, biology, chemistry, and literature.</li>
+            <li>Honors courses offer accelerated and enriched curriculum options for high-achieving students seeking academic challenges and intellectual stimulation</li>
+          </ul>
+          <h3 className="text-[22px] font-bold text-[#026229]">Extracurricular Opportunities</h3>
+          <ul className="list-disc  text-[#737373] text-[14px] space-y-1">
+            <li>Clubs and Organizations: Provides opportunities for students to explore their interests and passions outside the classroom through clubs, student organizations, and leadership activities.</li>
+            <li>Internships and Work Experience: Offers hands-on learning experiences and real-world exposure through internships, job shadowing, and career exploration programs.</li>
+            <li>Community Service and Volunteering: Encourages students to make a positive impact in their communities and develop leadership skills through service-learning projects and volunteer opportunities.</li>
+          </ul>
+          <h3 className="text-[22px] font-bold text-[#026229]">College and Career Preparation</h3>
+          <ul className="list-disc  text-[#737373] text-[14px] space-y-1">
+            <li>College Counseling: Guides students through the college application process, including standardized testing, college research, essay writing, and financial aid.</li>
+            <li>Career Exploration: Provides resources and support for students to explore potential career paths, develop career readiness skills, and make informed decisions about their future</li>
+          </ul>
         </div>
-        <div className="w-full md:w-1/2">
-          <img src={Sec2} alt="Secondary Education" className="w-full h-full object-cover rounded-lg shadow-md" />
+        <div className="">
+          <img src="contactImage2.png" alt="Secondary Education" className="" />
         </div>
       </div>
 
