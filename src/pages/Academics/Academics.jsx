@@ -122,14 +122,20 @@ const Academics = () => {
 
       {/* Academic Resources */}
       <div className="py-12 px-6 md:px-12 flex flex-col md:flex-row items-center gap-1">
-        <div className="text-left md:w-1/2 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-600">Academic Resources</h2>
-          <p className="text-gray-700 text-3xl">
-            Access a wealth of resources including online libraries, educational websites, and study tools.
-          </p>
+        <div className="">
+          <img src="contactImage2.png" alt="Academic Resources" className="" />
         </div>
-        <div className="w-full md:w-1/2">
-          <img src={Sec2} alt="Academic Resources" className="w-full h-full object-cover rounded-lg shadow-md" />
+        <div className="text-left md:w-1/2 space-y-6">
+          <h2 className="text-3xl md:text-[30px] font-bold text-[#323533]">Academic Resources</h2>
+          <RedLine />
+          <ul className="list-disc text-[#737373] text-[14px]">
+            <p className="">
+              Access a wealth of resources to support student learning and success
+            </p>
+            <li>Online libraries</li>
+            <li>Educational websites</li>
+            <li>Study tools</li>
+          </ul>
         </div>
       </div>
 
