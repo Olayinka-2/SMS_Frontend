@@ -8,6 +8,7 @@ import Tutor2 from '../../assets/Tutor2.png';
 import Tutor3 from '../../assets/Tutor3.png';
 import AboutImg from '../../assets/About.png';
 import HeroSection from '../../components/HeroSection';
+import { RedLine } from '../../components/RedLine';
 
 const About = () => {
     return (
@@ -19,19 +20,20 @@ const About = () => {
             {/* Mission/Vision Section */}
             <div className="container mx-auto px-6 py-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-green-700">Mission/Vision</h2>
-                        <h3 className="text-xl font-semibold mt-4">Mission</h3>
-                        <p className="text-gray-600 mt-2 text-sm md:text-base">
+                    <div className='md:pl-10'>
+                        <h2 className="text-2xl md:text-[28px] font-bold text-[#323533]">Mission/Vision</h2>
+                        <RedLine />
+                        <h3 className="text-[18px] text-[#026229] font-bold mt-4">Mission</h3>
+                        <p className="text-[#737373] mt-2 text-[12px]">
                             Empowering students to reach their full potential through innovative education, personalized support, and a commitment to excellence.
                         </p>
-                        <h3 className="text-xl font-semibold mt-6">Vision</h3>
-                        <p className="text-gray-600 mt-2 text-sm md:text-base">
+                        <h3 className="text-[18px] text-[#026229] font-bold mt-6">Vision</h3>
+                        <p className="text-[#737373] mt-2 text-[12px]">
                             To be a leading educational institution that inspires lifelong learning, fosters creativity and critical thinking, and prepares students to succeed in a global society.
                         </p>
                     </div>
                     <div>
-                        <img src={Sec2} alt="Mission" className="w-[70%] md:w-[60%] mx-auto rounded-lg shadow-lg" />
+                        <img src="/contactImage2.png" alt="Mission" className="  mx-auto" />
                     </div>
                 </div>
             </div>
@@ -40,7 +42,7 @@ const About = () => {
             <div className="bg-gray-100 py-12">
                 <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <img src={Sec2} alt="Director's Message" className="w-[70%] md:w-[60%] mx-auto rounded-lg shadow-lg" />
+                        <img src="/contactImage2.png" alt="Director's Message" className="w-[70%] md:w-[60%] mx-auto " />
                     </div>
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-green-700">Director's Message</h2>
