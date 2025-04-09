@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import AboutImg from "../../assets/About.png";
 import Sec2 from "../../assets/Sec2.png";
@@ -9,6 +9,7 @@ import Tutor2 from "../../assets/Tutor2.png";
 import Tutor3 from "../../assets/Tutor3.png";
 import HeroSection from "../../components/HeroSection";
 import { RedLine } from "../../components/RedLine";
+import StarRating from "../../components/StarRating";
 
 const tutorData = [
   { name: 'John Doe', subject: 'Profession', image: Tutor1 },
@@ -17,7 +18,16 @@ const tutorData = [
   { name: 'Julian Jameson', subject: 'Profession', image: Tutor2 },
 ]
 
+const testimonialData = [
+  { name: 'Regina Miles', role: 'Parent', image: "testimonial-user-cover-202.png", text: 'WiSchool has been a game-changer for our child\'s education. The personalized attention and supportive environment have made all the difference.' },
+  { name: 'Regina Miles', role: 'Students', image: "testimonial-user-cover-99.png", text: 'Choosing WiSchool was the best decision we made for our family. Our child is thriving academically and socially, thanks to the dedicated staff and engaging curriculum.' },
+  { name: 'Regina Miles', role: 'Designer', image: "testimonial-user-cover-86 (1).png", text: 'At WiSchool, every student truly matters. The caring community and focus on individual needs have exceeded our expectations.' },
+]
+
 const Academics = () => {
+  const productRating = 3.5; // show 3.5 stars for example
+
+
   return (
     <>
       <Navbar />
@@ -159,17 +169,37 @@ const Academics = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="bg-gray-100 py-12 px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[
-          { text: "This school changed my child's life. The staff dedication is unmatched!", author: "Jane Doe" },
-          { text: "An amazing place for learning. My child has grown tremendously.", author: "John Smith" },
-          { text: "A wonderful institution that truly cares about students.", author: "Sarah Lee" }
-        ].map((review, index) => (
-          <div key={index} className="bg-green-600 shadow-lg p-8 rounded-lg text-left">
-            <p className="italic text-white text-lg">{`"${review.text}"`}</p>
-            <h3 className="text-xl font-semibold mt-6">{`- ${review.author}`}</h3>
+      <div className=" py-12 px-6 ">
+        <div className="space-y-2 p-30">
+          <h2 className="text-3xl md:text-[28] font-bold text-[#323533]">Testimonials</h2>
+          <p className="list-disc text-[#737373] text-[14px]">See what our students and parents have to say about their experiences at WiSchoo</p>
+
+        </div>
+        <div className="px-20">
+          {/* <div className=" text-center flex flex-col items-center gap-4"> */}
+          <div className="md:flex  flex-row gap-40">            {
+            testimonialData.map(item => (
+              <div className="md:w-[20%] text-center md:flex flex-col items-center gap-4">
+                <StarRating rating={Math.round(productRating)} />
+                <p className="text-[#737373] text-[14px]">{item.text}</p>
+                <div className="flex justify-center items-center mt-5 gap-4">
+                  <img src={item.image} />
+                  <div className="flex flex-col">
+                    <p className="text-[#96BB7C] text-[14px]">{item.name}</p>
+                    <p className="text-[#252B42] text-[12px]">{item.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+            {/* </div> */}
+
+
+
+
+
           </div>
-        ))}
+        </div>
       </div>
     </>
   );
