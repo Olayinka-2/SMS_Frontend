@@ -8,6 +8,7 @@ import Tutor1 from "../../assets/Tutor1.png";
 import Tutor2 from "../../assets/Tutor2.png";
 import Tutor3 from "../../assets/Tutor3.png";
 import HeroSection from "../../components/HeroSection";
+import { RedLine } from "../../components/RedLine";
 
 const Academics = () => {
   return (
@@ -17,14 +18,15 @@ const Academics = () => {
 " image={AboutImg} about />
 
       {/* Primary School Curriculum */}
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center gap-12">
+      <div className="max-w-6xl mx-auto px-7 md:px-14 py-12 flex flex-col md:flex-row items-center gap-12">
         <div className="text-left md:w-1/2 space-y-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-green-600">Primary School Curriculum</h1>
-          <p className="text-gray-700 leading-relaxed">
-            Our primary school curriculum nurtures curiosity and creativity while building a strong academic foundation.
+          <h1 className="text-3xl md:text-[30px] font-bold text-[#323533]">Primary School Curriculum</h1>
+          <RedLine />
+          <p className="text-[#737373] text-[16px]">
+            At WiSchool, our primary school curriculum is designed to provide a strong foundation for academic success while nurturing students' curiosity, creativity, and love for learning. Our holistic approach integrates core subjects with hands-on learning experiences and character development initiatives
           </p>
-          <h3 className="text-2xl font-semibold text-gray-800">Core Subjects</h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
+          <h3 className="text-[22px] font-bold text-[#026229]">Core Subjects</h3>
+          <ul className="list-disc list-inside text-[#737373] text-[16px]">
             <li>Language Arts</li>
             <li>Mathematics</li>
             <li>Science</li>
@@ -32,9 +34,23 @@ const Academics = () => {
             <li>Art</li>
             <li>Physical Education</li>
           </ul>
+          <h3 className="text-[22px] font-bold text-[#026229]">Enrichment Programs</h3>
+          <ul className="list-disc  text-[#737373] text-[16px] space-y-1">
+            <li>STEM Education: Engages students in hands-on learning experiences that integrate science, technology, engineering, and mathematics.</li>
+            <li>Environmental Education: Raises awareness of environmental issues and promotes sustainable practices through outdoor exploration and conservation projects.</li>
+            <li>Character Education: Fosters values such as respect, responsibility, integrity, and empathy through character-building activities and discussions</li>
+          </ul>
+          <h3 className="text-[22px] font-bold text-[#026229]">Assessment and Evaluation</h3>
+          <ul className="list-disc  text-[#737373] text-[16px] space-y-1">
+            <li>Continuous assessment through quizzes, projects, and class participation.
+            </li>
+            <li>Periodic progress reports and parent-teacher conferences to monitor student growth and address any areas of concern.
+            </li>
+            <li>Standardized testing to measure student achievement and inform instructional planning</li>
+          </ul>
         </div>
-        <div className="w-full md:w-1/2">
-          <img src={Sec2} alt="Primary Education" className="w-full h-[520px] object-cover rounded-lg shadow-md" />
+        <div className="">
+          <img src="contactImage2.png" alt="Primary Education" className="" />
         </div>
       </div>
 
