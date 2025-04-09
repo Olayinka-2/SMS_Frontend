@@ -13,21 +13,7 @@ const About = () => {
     return (
         <>
             <Navbar />
-
-            {/* Hero Section with Background Image */}
-            {/* <div
-                className="relative bg-cover bg-center h-[250px] md:h-[350px] flex items-center justify-start text-white px-6 md:px-16 text-left"
-                style={{ backgroundImage: `url(${AboutImg})` }}
-            >
-                <div className=" bg-opacity-60 w-full h-full absolute top-0 left-0"></div>
-                <div className="relative z-10 max-w-2xl">
-                    <h1 className="text-3xl md:text-5xl font-bold">About Us</h1>
-                    <p className="mt-2 md:mt-4 text-sm md:text-lg">
-                        At WiSchool, we provide a nurturing and inclusive learning environment where every student thrives academically, socially, and emotionally.
-                    </p>
-                </div>
-            </div> */}
-            <HeroSection title="About Us" text="At WiSchool, we provide a nurturing and inclusive learning environment where every student thrives academically, socially, and emotionally." image={AboutImg} />
+            <HeroSection title="About Us" text="At WiSchool, we are dedicated to providing a nurturing and inclusive learning environment where every student can thrive academically, socially, and emotionally. Our commitment to excellence is reflected in our mission, vision, and the dedication of our leadership team and faculty" image={AboutImg} />
 
 
             {/* Mission/Vision Section */}
