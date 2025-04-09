@@ -141,14 +141,20 @@ const Academics = () => {
 
       {/* Extracurricular Activities -  */}
       <div className="py-12 px-6 md:px-12 flex flex-col md:flex-row-reverse items-center gap-12">
-        <div className="text-left md:w-1/2 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-600">Extracurricular Activities</h2>
-          <p className="text-gray-700 text-lg">
-            Join clubs, sports teams, and arts programs to explore your interests beyond academics.
-          </p>
+        <div className="">
+          <img src="contactImage2.png" alt="Extracurricular Activities" className="" />
         </div>
-        <div className="w-full md:w-1/2">
-          <img src={Sec2} alt="Extracurricular Activities" className="w-full h-full object-cover rounded-lg shadow-md" />
+        <div className="text-left md:w-1/2 space-y-6">
+          <h2 className="text-3xl md:text-[28] font-bold text-[#323533]">Extracurricular Activities</h2>
+          <RedLine />
+          <ul className="list-disc text-[#737373] text-[14px]">
+            <p className="">
+              Get involved and explore your interests with our wide range of extracurricular activities
+            </p>
+            <li>Clubs</li>
+            <li>Sports Teams</li>
+            <li>Arts Programs</li>
+          </ul>
         </div>
       </div>
 
