@@ -13,24 +13,8 @@ const Academics = () => {
   return (
     <>
       <Navbar />
-
-      {/* Hero Section */}
-      {/* <div
-        className="relative bg-cover bg-center h-[250px] md:h-[350px] flex items-center justify-start text-white px-6 md:px-16"
-        style={{ backgroundImage: `url(${AboutImg})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 max-w-3xl">
-          <h1 className="text-3xl md:text-5xl md:m-6 font-bold">Academics</h1>
-          <p className="mt-2 md:mt-4 text-sm md:text-lg">
-            At WiSchool, we're committed to providing a dynamic and enriching academic experience that prepares students for success.
-          </p>
-          <h2 className="mt-3 md:mt-5 text-xl font-semibold text-black">
-            Explore our offerings below
-          </h2>
-        </div>
-      </div> */}
-      <HeroSection title="Academics" text="At WiSchool, we're committed to providing a dynamic and enriching academic experience that prepares students for success." image={AboutImg} />
+      <HeroSection title="Academics" text="At WiSchool, we're committed to providing a dynamic and enriching academic experience that prepares students for success in an ever-changing world. Our comprehensive academic programs are designed to foster critical thinking, creativity, and a lifelong love for learning. 
+" image={AboutImg} about />
 
       {/* Primary School Curriculum */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center gap-12">

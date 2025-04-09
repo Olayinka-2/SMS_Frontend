@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const HeroSection = ({ title, text, image, btn }) => {
+const HeroSection = ({ title, text, image, btn, about }) => {
     return (
         <div className="relative h-[80vh] sm:pb-15 mt-15 bg-[#001B07] items-center text-[#F5F5F5] flex text-right  justify-center">
             <img
@@ -17,6 +17,9 @@ const HeroSection = ({ title, text, image, btn }) => {
                         <Link to='/student-admission'><button className="bg-[#09B451] rounded text-[#001B07] py-2 px-5">Student Admission</button></Link>
                         <Link to='/student-registration'><button className="bg-[#FFFFFF] rounded text-[#09B451] py-2 px-5">Student Registration</button></Link>
                     </div>
+                )}
+                {about && (
+                    <p className='font-bold text-[#F5F5F5] text-[26px] mt-10'>Explore our offerings below</p>
                 )}
             </div>
         </div>
