@@ -39,16 +39,37 @@ const About = () => {
             </div>
 
             {/* Director's Message Section */}
-            <div className="bg-gray-100 py-12">
+            <div className="py-10">
                 <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <img src="/contactImage2.png" alt="Director's Message" className="w-[70%] md:w-[60%] mx-auto " />
+                        <img src="/contactImage2.png" alt="Director's Message" className="mx-auto " />
                     </div>
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-green-700">Director's Message</h2>
-                        <p className="text-gray-600 mt-4 text-sm md:text-base">
-                            Welcome to WiSchool! As the Director, I am pleased to welcome you to our vibrant learning community. We are committed to providing holistic education that fosters academic excellence, creativity, and character development.
+                        <h2 className="text-2xl md:text-[28px] font-bold text-[#323533]">Director's Message</h2>
+                        <RedLine />
+                        <p className="text-[#737373] mt-4 text-sm md:text-base">
+                            Welcome to WiSchool! As the Director of WiSchool, it gives me great pleasure to welcome you to our vibrant learning community. At WiSchool, we are committed to providing a holistic education that fosters academic excellence, creativity, and character development. Our dedicated team of educators works tirelessly to ensure that every student receives personalized support and opportunities to thrive. Together, we strive to inspire a love for learning and equip students with the skills and knowledge they need to succeed in an ever-changing world. We look forward to partnering with you on this exciting journey of discovery and growth.
                         </p>
+                        <p className="text-[#737373] mt-6 text-sm md:text-base">Warm regards<br /> Danjuma Gboyako<br /> Director</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Principals's Message Section */}
+            <div className="py-10">
+                <div className="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+
+                    <div className='px-6'>
+                        <h2 className="text-2xl md:text-[28px] font-bold text-[#323533]">Director's Message</h2>
+                        <RedLine />
+                        <p className="text-[#737373] mt-4 text-sm md:text-base">Dear Students, Parents, and Visitors,</p>
+                        <p className="text-[#737373] mt-4 text-sm md:text-base">
+                            Welcome to WiSchool, where learning comes alive! As the Principal, I am thrilled to welcome you to our school community. At WiSchool, we believe in nurturing the whole child - academically, socially, and emotionally. Our dedicated faculty and staff are committed to providing a supportive and inclusive learning environment where every student feels valued, challenged, and inspired to reach their full potential. Whether it's in the classroom, on the playing field, or in the community, we encourage our students to embrace new opportunities, explore their interests, and strive for excellence in all that they do. I am excited to embark on this journey with you and look forward to celebrating your successes along the way.
+                        </p>
+                        <p className="text-[#737373] mt-6 text-sm md:text-base">Sincerely,<br /> Adamu Yabagi<br /> Director</p>
+                    </div>
+                    <div>
+                        <img src="/contactImage2.png" alt="Director's Message" className="mx-auto " />
                     </div>
                 </div>
             </div>
