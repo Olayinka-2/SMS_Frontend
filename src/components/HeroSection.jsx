@@ -7,7 +7,7 @@ const HeroSection = ({ title, text, image, btn, about }) => {
             <img
                 src={image}
                 alt="Contact Us"
-                className="absolute inset-0 w-full h-full object-cover opacity-50"
+                className="absolute inset-0 w-full absolute h-full object-cover opacity-50"
             />
             <div className="relative text-justify p-18">
                 <h1 className="text-[50px] font-bold">{title}</h1>
