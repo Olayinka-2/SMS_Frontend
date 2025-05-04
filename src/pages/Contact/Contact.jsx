@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="p-10">
                 <h2 className="text-[34px] text-[#323533] font-bold">Office Hours</h2>
                 <p className="text-[#737373] text-[14px]">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                <p className="text-[#737373] text-[14px]">Saturday: 9:00 AM - 12:00 PM</p>
+                <p className="text-[#737373] text-[14px]">Saturday: 9:00 AM - 12:00 PM.</p>
             </div>
 
             {/* Maps & Directions */}
