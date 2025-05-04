@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSection from '../../../components/HeroSection';
 
 const events = [
   {
@@ -27,7 +28,27 @@ const events = [
     date: '15',
     title: 'Parent-Teacher Conference',
     description: 'Description: Meet with your child\'s teachers to discuss their progress, goals and academic achievements. This is a valuable opportunity for parents to connect with teachers and support their child\'s learning journey',
-    time: '<strong>Time:</strong> 9:00 AM - 12:00PM'
+   time: '<strong>Time:</strong> 9:00 AM - 12:00PM'
+  },
+];
+
+const NewsEvents = () => {
+  return (
+    <div className="">
+
+      <HeroSection image="/news.png" title="News & Events" text="Welcome to the WiSchool News & Events page! Stay up-to-date with the latest happenings, announcements, and exciting events from our school community. Whether it's academic achievements, cultural celebrations, or extracurricular activities, you'll find all the news and updates right here." />
+
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className=" p-6 rounded-lg ">
+          <div className=" mt-6">
+
+            <div >
+              {/* <div style={{backgroundImage: 'url(https://res.cloudinary.com/dtz4rslmb/image/upload/v1738831296/loupe_1_ijxbmh.png), norepeat', height: '3px'}}></div> */}
+              <input type="text" placeholder='Search for events' className='text-[16px] border-gray-600 pr-20 pb-1.5 pl-1' style={{ border: '1px solid gray', paddingTop: '5px', paddingLeft: '3px' }} />
+              <button className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+                View All Events
+              </button>
+            </div>
   },
 ];
 
