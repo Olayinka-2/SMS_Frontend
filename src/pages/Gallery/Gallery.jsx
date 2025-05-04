@@ -48,7 +48,7 @@ const Gallery = () => {
           <div key={index} className="bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">  
             <img src={image.src} alt={image.title} className="rounded-t-lg w-full h-50 object-cover" />  
             <div className="p-4">  
-              <h3 className="font-semibold">{image.title}</h3>  
+              <h3 className="font-semibold">{image.title}.</h3>  
             </div>  
           </div>  
         ))}  
