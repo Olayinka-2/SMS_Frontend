@@ -10,7 +10,7 @@ const SubscribeSection = ({ show }) => {
                 <input
                     type="email"
                     placeholder="Your email"
-                    className="p-3  rounded-l w-full"
+                    className="p-3 outline-0  rounded-l w-full"
                 />
                 <button className="bg-[#09B451] text-white p-3">Subscribe</button>
             </div>
