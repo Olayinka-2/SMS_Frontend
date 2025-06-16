@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className="bg-green-900 text-white py-12 px-6">
+        <div className="bg-amber-100 text-white py-12 px-6">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                 {/* Column 1 */}
                 <div>
@@ -52,7 +52,7 @@ const Footer = () => {
                     Powered by <span className="text-green-400 cursor-pointer hover:underline">Scholastify360</span>
                 </h2>
             </div>
-            
+
         </div>
     );
 };
