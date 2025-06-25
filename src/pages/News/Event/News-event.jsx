@@ -23,12 +23,6 @@ const events = [
 const NewsEvents = () => {
   return (
     <div>
-      <HeroSection
-        image="/news.png"
-        title="News & Events"
-        text="Welcome to the WiSchool News & Events page! Stay up-to-date with the latest happenings, announcements, and exciting events from our school community. Whether it's academic achievements, cultural celebrations, or extracurricular activities, you'll find all the news and updates right here."
-      />
-
       <header
         className="bg-cover bg-center h-100 md:h-125 sm:h-120 text-white relative"
         style={{
