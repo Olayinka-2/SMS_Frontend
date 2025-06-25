@@ -23,6 +23,12 @@ const events = [
 const NewsEvents = () => {
   return (
     <div>
+      <HeroSection
+        image="/news.png"
+        title="News & Events"
+        text="Welcome to the WiSchool News & Events page! Stay up-to-date with the latest happenings, announcements, and exciting events from our school community. Whether it's academic achievements, cultural celebrations, or extracurricular activities, you'll find all the news and updates right here."
+      />
+
       <header
         className="bg-cover bg-center h-100 md:h-125 sm:h-120 text-white relative"
         style={{
@@ -45,7 +51,7 @@ const NewsEvents = () => {
             </p>
           </div>
         </div>
-      </header>
+      </header> */}
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="p-6 rounded-lg">

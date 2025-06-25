@@ -16,11 +16,18 @@ import Navbar from './components/Navbar/Navbar';
  import Footer from './components/Footer/Footer';
 import BlogDetail from './pages/Blog/BlogDetail';
 import StudentRegistration from './pages/Admission/studentRegistration';
+import Dashboard from './Dashboard/dashboard'; 
+import AdminProfile from './Dashboard/Profile/AdminProfile';
+import AccessPermission from './Dashboard/AP/AccessPermission';
+
+
+{/* <Route path="/profile" element={<AdminProfile />} /> */}
+
  
 const App = () => {
   const location = useLocation();
 
-  const excludePaths = ["/login"];
+const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission"];
 
   return (
     <>
@@ -39,6 +46,15 @@ const App = () => {
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/Adminprofile" element={<AdminProfile />} />
+        {/* <Route path="/profile" element={<AdminProfile />} /> */}
+        <Route path="/Accesspermission" element={<AccessPermission />} />
+
+
+
+
+
 
       </Routes>
       {!excludePaths.includes(location.pathname) && <Footer />}
