@@ -47,7 +47,7 @@ const NewsEvents = () => {
               the latest happenings, announcements, and exciting events from our
               school community. Whether it's academic achievements, cultural
               celebrations, or extracurricular activities, you'll find all the
-              news and updates right here.
+              news and updates right here
             </p>
           </div>
         </div>
