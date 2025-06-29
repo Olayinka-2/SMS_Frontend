@@ -51,7 +51,7 @@ const NewsEvents = () => {
             </p>
           </div>
         </div>
-      </header> */}
+      </header>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="p-6 rounded-lg">
