@@ -16,7 +16,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import BlogDetail from './pages/Blog/BlogDetail';
 import StudentRegistration from './pages/Admission/studentRegistration';
-import Dashboard from './Dashboard/dashboard'; 
+import Dashboard from './Dashboard/dashboard';
 import AdminProfile from './Dashboard/Profile/AdminProfile';
 import AccessPermission from './Dashboard/AP/AccessPermission';
 import ActivityLog from './Dashboard/ActivityLog/ActivityLog';
@@ -28,6 +28,7 @@ import AdmissionManagement from './HR/AdmissionManagement/AdmissionManagement';
 import StudentInfo from './HR/StudentInfo/StudentInfo';
 import TeachersDashboard from './Teachers/TeachersDashboard/TeachersDashboard';
 import TeachersProfile from './Teachers/TeachersProfile/TeachersProfile';
+import MessagePage from './Messaging/MessagePage/MessagePage';
 
 
 
@@ -40,12 +41,12 @@ import TeachersProfile from './Teachers/TeachersProfile/TeachersProfile';
 
 {/* <Route path="/profile" element={<AdminProfile />} /> */}
 
- 
+
 const App = () => {
   const location = useLocation();
 
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
-  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile"
+  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging"
 ];
 
   return (
@@ -78,6 +79,8 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/StudentInfo" element={<StudentInfo/>} />
         <Route path="/TeachersDashboard" element={<TeachersDashboard/>} />
         <Route path="/TeachersProfile" element={<TeachersProfile/>} />
+
+        <Route path="/messaging" element={<MessagePage/>} />
 
 
       </Routes>
