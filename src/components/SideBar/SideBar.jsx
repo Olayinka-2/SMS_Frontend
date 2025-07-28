@@ -22,7 +22,7 @@ function SidebarItem({ icon: Icon, label, active, onClick }) {
         active ? "bg-green-600 text-white" : "text-gray-700 hover:bg-gray-100"
       }  ${label ? "w-full": "w-min justify-center"}`}
     >
-      <Icon className={`${label ? "w-4 h-4" : "w-5 h-5"}`}/>
+      <Icon className={`${label ? "w-4 h-4" : "w-5 h-5 text-black"}`}/>
       {label && <span>{label}</span>}
     </button>
   );

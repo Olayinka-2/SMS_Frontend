@@ -1,67 +1,69 @@
 import Layout from "../../components/Layout/Layout";
-import {Search, CirclePlus, Video, Phone} from "lucide-react";
+import MessageList from "../MessageComponents/MessageList";
+import StartConversation from "../MessageComponents/StartConversation";
+import MessageHeader from "../MessageComponents/MessageHeader";
+
 
 import Tutor1 from "../../assets/Tutor1.png";
-import chatBubbles from "../../assets/chatBubbles.png";
+
 
 export default function MessagePage() {
+  const users = [
+    { id: 1, name: "Danjuma Danlami", img: Tutor1 },
+    { id: 2, name: "Sule Madu", img: Tutor1 },
+    { id: 3, name: "Danlami Yokolo", img: Tutor1 },
+  ];
+
   return(
     <>
       <Layout activeTab = "Messaging">
         <div className="flex h-screen">
-          <div className="py-5 pl-5 pr-3 border border-gray-200 w-80 h-screen flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">Messaging</h1>
 
-            <div className="flex gap-4 items-center">
-              <p className="text-lg font-medium">PERSONAL MESSAGES</p>
-              <Search className="w-6 h-6 text-green-500" />
-              <CirclePlus className="w-6 h-6 text-green-500" />
-            </div>
-
-            <div className="relative w-full mx-auto">
-              <input type="text" name="" id=""
-                className="w-full p-1 rounded border border-gray-400 focus:outline-none"
-              />
-            <Search className="w-5 h-5 text-gray-400 absolute top-2 right-3" />
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <div className="py-2 px-3 flex items-center gap-2">
-                <img src={Tutor1} alt="profile Image" className="block w-10 h-10 rounded-full"/>
-                <p className="font-medium">Danjuma Danlami</p>
-              </div>
-              <div className="py-2 px-3 flex items-center gap-2">
-                <img src={Tutor1} alt="profile Image" className="block w-10 h-10 rounded-full"/>
-                <p className="font-medium">Sule Madu</p>
-              </div>
-              <div className="py-2 px-3 flex items-center gap-2">
-                <img src={Tutor1} alt="profile Image" className="block w-10 h-10 rounded-full"/>
-                <p className="font-medium">Danlami Yokolo</p>
-              </div>
-            </div>
-          </div>
-
-
+          <MessageList users = {users}/>
           <div className="flex-1 flex flex-col h-screen">
-            <div className="flex justify-between py-2 px-12  border border-gray-200 h-16">
-              <div className="py-2 px-3 flex items-center gap-2">
-                <img src={Tutor1} alt="profile Image" className="block w-8 h-8 rounded-full"/>
-                <div className="flex flex-col justify-center">
-                  <p className="text-sm font-medium">Danjuma Danlami</p>
-                  <p className="text-sm font-light text-gray-400">Last seen yesterday at 8:00am</p>
+            <MessageHeader />
+
+            <div className="border border-gray-200 flex-1">
+
+              {/* <StartConversation /> */}
+              <div className="h-full p-12 w-full">
+                <div className="flex flex-col gap-6 w-full">
+                  <div className="bg-blue-500 border-2 border-blue-500 max-w-xs w-max p-2 relative rounded-2xl">
+                    <div className="w-16 h-16 rounded-full overflow-hidden absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 p-2">
+                      <img src={Tutor1} alt="" className="w-full rounded-full" />
+                    </div>
+                    <div className="flex flex-col gap-3 text-white text-sm ml-8">
+                      <p className="font-medium">Danlami Sule</p>
+                      <p className="text-base font-normal">Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adlorem consectetur adipisicing elit. Iste, vero?</p>
+                      <p className="text-xs font-normal">08:00am</p>
+                    </div>
+                  </div>
+
+                  <div className="self-end flex flex-col gap-1">
+                    <div className="flex gap-2 items-center ml-auto self-end">
+                      <img src={Tutor1} alt="" className="w-10 h-10 rounded-full border-2 border-black-800"/>
+                      <p className="text-xs">You</p>
+                      <p className="text-xs text-gray-400">11:50</p>
+                    </div>
+
+                    <div className="bg-blue-200 max-w-xs w-max p-3 relative rounded-2xl self-end">
+                      <div className="flex flex-col gap-3 text-gray-700 text-sm">
+                        <p className="text-base font-normal">Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adlorem consectetur adipisicing elit. Iste, vero?</p>
+                        <p className="text-xs font-normal self-end">08:00am</p>
+                      </div>
+                    </div>
+                    <div className="bg-blue-200 max-w-xs w-max p-3 relative rounded-2xl self-end">
+                      <div className="flex flex-col gap-3 text-gray-700 text-sm">
+                        <p className="text-base font-normal">Lorem ng elit. Iste, vero?</p>
+                        <p className="text-xs font-normal self-end">08:00am</p>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
-              <div className="flex gap-4 items-center">
-                <Video  className="rounded bg-green-100 text-green-800 w-8 h-8 p-2 cursor-pointer " />
-                <Phone className= "rounded bg-purple-100 text-pink-900 w-8 h-8 p-2 cursor-pointer " />
-              </div>
-            </div>
 
-            <div className="border border-gray-200 flex-1 flex justify-center items-center">
-              <div className="flex flex-col items-center">
-                <img src={chatBubbles} alt="start conversation Image" className="mb-7 w-40  h-32" />
-                <p className="font-medium text-lg">Start a conversation</p>
-              </div>
             </div>
           </div>
         </div>
