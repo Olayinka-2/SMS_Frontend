@@ -1,12 +1,12 @@
 // tailwind.config.js
 import { createRequire } from 'module';
-const require = createRequire(import.meta.url);  
-module.exports = {  
-    content: ["./src//*.{js,jsx,ts,tsx}", "./public/index.html"],  
-    theme: {  
-      extend: {},  
-    },  
-    plugins: [],  
+const require = createRequire(import.meta.url);
+module.exports = {
+    content: ["./src//*.{js,jsx,ts,tsx}", "./public/index.html"],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
   };
 
 /** @type {import('tailwindcss').Config} */

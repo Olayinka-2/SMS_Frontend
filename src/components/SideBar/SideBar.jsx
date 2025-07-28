@@ -32,7 +32,7 @@ export default function Sidebar({ isOpen, setIsOpen, activeTab }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  let isMessagePage = location.pathname == "/messaging"; 
+  let isMessagePage = location.pathname == "/messaging";
 
   const items = [
     { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
