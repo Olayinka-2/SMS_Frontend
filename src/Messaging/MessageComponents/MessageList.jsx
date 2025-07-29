@@ -1,6 +1,10 @@
 import {Search, CirclePlus} from "lucide-react";
 
-const MessageList = ({users}) => {
+const MessageList = ({users, setSelectedUser, selectedUser}) => {
+
+  function handleClick(user) {
+    setSelectedUser(user);
+  }
 
   return(
     <>
@@ -22,12 +26,26 @@ const MessageList = ({users}) => {
 
             <div className="flex flex-col gap-3">
               {
-                users.map((user) => (
-                <div className="py-2 px-3 flex items-center gap-2" key={user.id}>
-                  <img src={user.img} alt="profile Image" className="block w-10 h-10 rounded-full"/>
-                  <p className="font-medium">{user.name}</p>
-                </div>
-                ))
+                users.map((user) => {
+                  let isSelected;
+                  if(selectedUser) {
+                    isSelected = selectedUser.id == user.id;
+                  }
+
+                  return (
+                    <>
+                      <div className={`py-2 px-3 flex items-center gap-2 cursor-pointer
+                          ${isSelected ? "bg-green-300": ""}
+                        `}
+                          key={user.id}
+                          onClick={(e) => handleClick(user)}>
+                          <img src={user.img} alt="profile Image" className="block w-10 h-10 rounded-full"/>
+                          <p className="font-medium">{user.name}</p>
+                        </div>
+                    </>
+                  )
+
+                })
               }
 
             </div>

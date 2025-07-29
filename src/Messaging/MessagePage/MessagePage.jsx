@@ -8,6 +8,7 @@ import { Search, AtSign, Image, Send, Smile, ArrowBigDownDashIcon } from "lucide
 
 
 import Tutor1 from "../../assets/Tutor1.png";
+import { useState } from "react";
 
 
 export default function MessagePage() {
@@ -17,19 +18,22 @@ export default function MessagePage() {
     { id: 3, name: "Danlami Yokolo", img: Tutor1 },
   ];
 
+  const [selectedUser, setSelectedUser] = useState(null);
+
   return(
     <>
       <Layout activeTab = "Messaging">
-        <div className="flex h-full">
+        <div className="flex h-screen">
 
-          <MessageList users = {users}/>
+          <MessageList users = {users} setSelectedUser={setSelectedUser} selectedUser={selectedUser}/>
           <div className="flex-1 flex flex-col h-screen">
             <MessageHeader />
 
             <div className="border border-gray-200 flex-1 flex flex-col">
 
-              {/* <StartConversation /> */}
-              <div className="h-full flex flex-col">
+              {
+                selectedUser ?
+                <div className="h-full flex flex-col">
                 <div className="overflow-y-auto p-12 w-full"
                   style={{ height: "calc(100vh - 10rem)" }}>
                   <div className="flex flex-col gap-6 w-full">
@@ -107,7 +111,9 @@ export default function MessagePage() {
 
 
 
-              </div>
+              </div>  :
+                  <StartConversation />
+              }
 
             </div>
           </div>
