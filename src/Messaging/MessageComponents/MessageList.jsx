@@ -33,7 +33,6 @@ const MessageList = ({users, setSelectedUser, selectedUser}) => {
                   }
 
                   return (
-                    <>
                       <div className={`py-2 px-3 flex items-center gap-2 cursor-pointer
                           ${isSelected ? "bg-green-300": ""}
                         `}
@@ -42,7 +41,6 @@ const MessageList = ({users, setSelectedUser, selectedUser}) => {
                           <img src={user.img} alt="profile Image" className="block w-10 h-10 rounded-full"/>
                           <p className="font-medium">{user.name}</p>
                         </div>
-                    </>
                   )
 
                 })
