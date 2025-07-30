@@ -10,68 +10,102 @@ const Messages = ({userMessages, selectedUser}) => {
       if(grouped[message.date]) {
         grouped[message.date].push(message);
       } else {
-        grouped[message.date] = [];
+        grouped[message.date] = [message];
       }
     });
 
     return Object.entries(grouped);
   };
 
+  console.log(formatMessage());
+
+  const groupedMessages = formatMessage();
+
   return(
     <>
       <div className="h-full flex flex-col">
-                <div className="overflow-y-auto p-12 w-full"
+                <div className="overflow-y-auto px-12 pb-12 w-full"
                   style={{ height: "calc(100vh - 10rem)" }}>
-                  <div className="flex flex-col gap-6 w-full">
 
-                    <div className="bg-blue-500 border-2 border-blue-500 max-w-xs w-max p-2 relative rounded-2xl mt-5">
-                      <div className="w-16 h-16 rounded-full overflow-hidden absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 p-2">
-                        <img src={Tutor1} alt="" className="w-full rounded-full" />
-                      </div>
-                      <div className="flex flex-col gap-3 text-white text-sm ml-8">
-                        <p className="font-medium">Danlami Sule</p>
-                        <p className="text-base font-normal">Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adlorem consectetur adipisicing elit. Iste, vero?</p>
-                        <p className="text-xs font-normal">08:00am</p>
-                      </div>
-                    </div>
 
-                    <div className="self-end flex flex-col gap-1">
-                      <div className="flex gap-2 items-center ml-auto self-end">
-                        <img src={Tutor1} alt="" className="w-10 h-10 rounded-full border-2 border-black-800"/>
-                        <p className="text-xs">You</p>
-                        <p className="text-xs text-gray-400">11:50</p>
+                    {
+                      groupedMessages.map(([day, message]) => (
+                      <div className="flex flex-col w-full">
+                        <div className="flex items-center w-full gap-1 my-10" key={day}>
+                        <span className="h-px flex-1 bg-gray-300"></span>
+                        <span className="text-gray-600 text-sm font-normal whitespace-nowrap">{day}</span>
+                        <span className="h-px flex-1 bg-gray-300"></span>
                       </div>
 
-                      <div className="bg-blue-200 max-w-xs w-max p-3 relative rounded-2xl self-end">
-                        <div className="flex flex-col gap-3 text-gray-700 text-sm">
-                          <p className="text-base font-normal">Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adlorem consectetur adipisicing elit. Iste, vero?</p>
-                          <p className="text-xs font-normal self-end">08:00am</p>
-                        </div>
-                      </div>
-                      <div className="bg-blue-200 max-w-xs w-max p-3 relative rounded-2xl self-end">
-                        <div className="flex flex-col gap-3 text-gray-700 text-sm">
-                          <p className="text-base font-normal">Lorem ng elit. Iste, vero?</p>
-                          <p className="text-xs font-normal self-end">08:00am</p>
-                        </div>
-                      </div>
-                    </div>
+                      {
+                        message.map((msg, index) => {
+                          const isFirstSender =
+                            index === 0 || message[index - 1].sender !== msg.sender;
 
-                    <div className="flex items-center w-full gap-1">
-                      <span className="h-px flex-1 bg-gray-300"></span>
-                      <span className="text-gray-600 text-sm font-normal whitespace-nowrap">Project</span>
-                      <span className="h-px flex-1 bg-gray-300"></span>
-                    </div>
+                            console.log(index)
 
-                    <div className="bg-blue-500 border-2 border-blue-500 max-w-xs w-max p-2 relative rounded-2xl mt-5">
-                      <div className="w-16 h-16 rounded-full overflow-hidden absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 p-2">
-                        <img src={Tutor1} alt="" className="w-full rounded-full" />
+                          const isUser = msg.sender === "user"
+
+                          const alignment = isUser ? "self-start" : "self-end";
+                          const color = isUser
+                            ? "bg-blue-500 text-gray-100"
+                            : "bg-blue-200 text-blue-900";
+
+
+                          return(
+                            <div key={msg} className="flex flex-col">
+
+                              {
+                                isFirstSender ? (
+                                  isUser ? (
+                                    // 🟦 Message from me (user) - with image on the right
+                                    <div className={`${color} ${alignment} max-w-xs w-max p-3 relative rounded-2xl pl-7`}>
+                                    <div className="w-16 h-16 rounded-full overflow-hidden absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 p-2">
+                                    <img src={Tutor1} alt="" className="w-full rounded-full" />
+                                  </div>
+                                    <div className="flex flex-col gap-3 text-sm">
+                                      <p className="font-medium">{selectedUser.name}</p>
+                                      <p className="text-base font-normal">{msg.text}</p>
+                                      <p className="text-xs font-normal">{msg.time}</p>
+                                    </div>
+                                  </div>
+                                  ) : (
+                                    // 🟦 Message from other user - with image on the left
+                                    <div className="self-end flex flex-col gap-1">
+                                    <div className="flex gap-2 items-center ml-auto self-end">
+                                      <img src={Tutor1} alt="" className="w-10 h-10 rounded-full border-2 border-black-800"/>
+                                      <p className="text-xs">You</p>
+                                      <p className="text-xs text-gray-400">11:50</p>
+                                    </div>
+
+                                    <div className={`${color} ${alignment} max-w-xs w-max p-3 relative rounded-2xl my-1`}>
+                                      <div className="flex flex-col gap-3 text-sm">
+                                        <p className="font-medium">{selectedUser.name}</p>
+                                        <p className="text-base font-normal">{msg.text}</p>
+                                        <p className="text-xs font-normal">{msg.time}</p>
+                                      </div>
+                                  </div>
+                                  </div>
+                                  )
+                                ) : (
+                                  // ⬜ Not first sender — no image, just message bubble
+                                  <div className={`${color} ${alignment} max-w-xs w-max p-3 relative rounded-2xl my-1`}>
+                                  <div className="flex flex-col gap-3 text-sm">
+                                    <p className="font-medium">{selectedUser.name}</p>
+                                    <p className="text-base font-normal">{msg.text}</p>
+                                    <p className="text-xs font-normal">{msg.time}</p>
+                                  </div>
+                                </div>
+                                )
+                              }
+
+                            </div>
+                          )
+                        })
+                      }
                       </div>
-                      <div className="flex flex-col gap-3 text-white text-sm ml-8">
-                        <p className="font-medium">Danlami Sule</p>
-                        <p className="text-base font-normal">Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adlorem consectetur adipisicing elit. Iste, vero?</p>
-                        <p className="text-xs font-normal">08:00am</p>
-                      </div>
-                    </div>
+                      ))
+                    }
 
 
                   </div>
@@ -95,7 +129,6 @@ const Messages = ({userMessages, selectedUser}) => {
                     </div>
                 </div>
 
-              </div>
     </>
   )
 }

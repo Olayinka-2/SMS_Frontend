@@ -37,7 +37,7 @@ const MessageList = ({users, setSelectedUser, selectedUser}) => {
                           ${isSelected ? "bg-green-300": ""}
                         `}
                           key={user.id}
-                          onClick={(e) => handleClick(user)}>
+                          onClick={() => handleClick(user)}>
                           <img src={user.img} alt="profile Image" className="block w-10 h-10 rounded-full"/>
                           <p className="font-medium">{user.name}</p>
                         </div>

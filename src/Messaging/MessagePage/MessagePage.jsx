@@ -19,9 +19,12 @@ export default function MessagePage() {
       name: "Danjuma Danlami",
       img: Tutor1,
       messages: [
+        { text: "Hey there!", time: "08:00am", sender: "user", date: "Yesterday" },
+        { text: "Hey there!", time: "08:00am", sender: "user", date: "Yesterday" },
+        { text: "How ok ok", time: "08:00am", sender: "me", date: "Today" },
         { text: "Hey there!", time: "08:00am", sender: "user", date: "Today" },
-        { text: "Hello, how are you?", time: "08:01am", sender: "me", date: "Today" },
-        { text: "Doing well, thanks!", time: "08:02am", sender: "user", date: "Today" }
+        { text: "How are you doing", time: "08:00am", sender: "me", date: "Today" },
+
       ]
     },
     {
