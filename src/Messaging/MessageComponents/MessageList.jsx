@@ -13,8 +13,8 @@ const MessageList = ({users, setSelectedUser, selectedUser}) => {
 
             <div className="flex gap-4 items-center">
               <p className="text-lg font-medium">PERSONAL MESSAGES</p>
-              <Search className="w-6 h-6 text-green-500" />
-              <CirclePlus className="w-6 h-6 text-green-500" />
+              <Search className="w-6 h-6 text-green-500 cursor-pointer" />
+              <CirclePlus className="w-6 h-6 text-green-500 cursor-pointer" />
             </div>
 
             <div className="relative w-full mx-auto">
