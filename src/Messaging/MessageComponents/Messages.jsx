@@ -111,7 +111,7 @@ const Messages = ({userMessages, selectedUser}) => {
                   </div>
                 </div>
 
-                  <div className="relative mt-auto mb-5 mx-auto w-9/12">
+                  <div className="relative mt-auto mb-10 mx-auto w-9/12">
                     <input
                       type="text"
                       placeholder="Search or type a message..."
