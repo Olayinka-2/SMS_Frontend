@@ -265,11 +265,11 @@ export default function EventPage() {
                       <tr
                         key={event.id}
                         className={`border ${
-                          index % 2 === 0 ? "bg-gray-100" : ""
+                          index % 2 === 0 && "bg-gray-100"
                         }`}
                       >
                         <td className="px-2 py-5 text-xs text-center text-gray-600 border border-white border-l-gray-100">
-                          {index + 1}
+                          {event.id}
                         </td>
                         <td className="px-2 py-5 text-xs text-center text-gray-600 border border-white">
                           {event.title}
