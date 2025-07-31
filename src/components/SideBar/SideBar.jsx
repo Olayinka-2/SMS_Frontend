@@ -18,8 +18,8 @@ function SidebarItem({ icon: Icon, label, active, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-2 px-4 py-2 rounded-md text-left transition ${
-        active ? "bg-green-600 text-white" : "text-gray-700 hover:bg-gray-100"
+      className={`flex items-center gap-2 px-4 py-2 rounded-md text-left transition cursor-pointer ${
+        active ? "bg-green-600 text-white" : "text-gray-700 hover:bg-gray-200"
       }  ${label ? "w-full": "w-min justify-center"}`}
     >
       <Icon className={`${label ? "w-4 h-4" : "w-5 h-5 text-black"}`}/>
