@@ -32,7 +32,7 @@ export default function Sidebar({ isOpen, setIsOpen, activeTab }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  let isMessagePage = location.pathname == "/Messaging";
+  let isMessagePage = location.pathname == "/messaging";
 
   const items = [
     { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
@@ -40,7 +40,7 @@ export default function Sidebar({ isOpen, setIsOpen, activeTab }) {
     { icon: User, label: "Teachers", path: "/TeachersDashboard" },
     { icon: User, label: "Parents", path: "/parents" },
     { icon: User, label: "Students", path: "/students" },
-    { icon: MessageCircle, label: "Messaging", path: "/Messaging" },
+    { icon: MessageCircle, label: "messaging", path: "/messaging" },
     { icon: CalendarDays, label: "Events", path: "/Events" },
     { icon: DollarSign, label: "Finance", path: "/finance" },
     { icon: Bell, label: "Notice Board", path: "/notice-board" },

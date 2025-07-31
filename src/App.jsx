@@ -47,7 +47,7 @@ const App = () => {
   const location = useLocation();
 
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
-  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/Messaging", "/Events",
+  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events",
 ];
 
   return (
@@ -81,7 +81,7 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/TeachersDashboard" element={<TeachersDashboard/>} />
         <Route path="/TeachersProfile" element={<TeachersProfile/>} />
 
-        <Route path="/Messaging" element={<MessagePage/>} />
+        <Route path="/messaging" element={<MessagePage/>} />
         <Route path="/Events" element={<EventPage/>} />
 
 

@@ -58,7 +58,7 @@ const Messages = ({userMessages, selectedUser}) => {
                               {
                                 isFirstSender ? (
                                   isUser ? (
-                                    // 🟦 Message from me (user) - with image on the right
+
                                     <div className={`${color} ${alignment} max-w-xs w-max p-3 relative rounded-2xl pl-7`}>
                                     <div className="w-16 h-16 rounded-full overflow-hidden absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 p-2">
                                     <img src={Tutor1} alt="" className="w-full rounded-full" />
@@ -66,34 +66,34 @@ const Messages = ({userMessages, selectedUser}) => {
                                     <div className="flex flex-col gap-3 text-sm">
                                       <p className="font-medium">{selectedUser.name}</p>
                                       <p className="text-base font-normal">{msg.text}</p>
-                                      <p className="text-xs font-normal">{msg.time}</p>
+                                      <p className="self-end text-xs font-normal">{msg.time}</p>
                                     </div>
                                   </div>
                                   ) : (
-                                    // 🟦 Message from other user - with image on the left
+
                                     <div className="self-end flex flex-col gap-1">
                                     <div className="flex gap-2 items-center ml-auto self-end">
                                       <img src={Tutor1} alt="" className="w-10 h-10 rounded-full border-2 border-black-800"/>
                                       <p className="text-xs">You</p>
-                                      <p className="text-xs text-gray-400">11:50</p>
+                                      <p className="text-xs text-gray-400">{msg.time}</p>
                                     </div>
 
                                     <div className={`${color} ${alignment} max-w-xs w-max p-3 relative rounded-2xl my-1`}>
                                       <div className="flex flex-col gap-3 text-sm">
                                         <p className="font-medium">{selectedUser.name}</p>
                                         <p className="text-base font-normal">{msg.text}</p>
-                                        <p className="text-xs font-normal">{msg.time}</p>
+                                        <p className="self-end text-xs font-normal">{msg.time}</p>
                                       </div>
                                   </div>
                                   </div>
                                   )
                                 ) : (
-                                  // ⬜ Not first sender — no image, just message bubble
+
                                   <div className={`${color} ${alignment} max-w-xs w-max p-3 relative rounded-2xl my-1`}>
                                   <div className="flex flex-col gap-3 text-sm">
                                     <p className="font-medium">{selectedUser.name}</p>
                                     <p className="text-base font-normal">{msg.text}</p>
-                                    <p className="text-xs font-normal">{msg.time}</p>
+                                    <p className="self-end text-xs font-normal">{msg.time}</p>
                                   </div>
                                 </div>
                                 )

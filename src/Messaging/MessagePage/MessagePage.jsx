@@ -62,7 +62,7 @@ export default function MessagePage() {
 
   return(
     <>
-      <Layout activeTab = "Messaging">
+      <Layout activeTab = "messaging">
         <div className="flex min-h-screen bg-white">
 
           <MessageList users = {users} setSelectedUser={setSelectedUser} selectedUser={selectedUser}/>
