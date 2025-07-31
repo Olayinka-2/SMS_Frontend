@@ -29,6 +29,7 @@ import StudentInfo from './HR/StudentInfo/StudentInfo';
 import TeachersDashboard from './Teachers/TeachersDashboard/TeachersDashboard';
 import TeachersProfile from './Teachers/TeachersProfile/TeachersProfile';
 import MessagePage from './Messaging/MessagePage/MessagePage';
+import EventPage from './Events/EventPage';
 
 
 
@@ -46,7 +47,7 @@ const App = () => {
   const location = useLocation();
 
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
-  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging"
+  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/Messaging", "/Events",
 ];
 
   return (
@@ -80,7 +81,8 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/TeachersDashboard" element={<TeachersDashboard/>} />
         <Route path="/TeachersProfile" element={<TeachersProfile/>} />
 
-        <Route path="/messaging" element={<MessagePage/>} />
+        <Route path="/Messaging" element={<MessagePage/>} />
+        <Route path="/Events" element={<EventPage/>} />
 
 
       </Routes>
