@@ -29,7 +29,7 @@ import StudentInfo from './HR/StudentInfo/StudentInfo';
 import TeachersDashboard from './Teachers/TeachersDashboard/TeachersDashboard';
 import TeachersProfile from './Teachers/TeachersProfile/TeachersProfile';
 import MessagePage from './Messaging/MessagePage/MessagePage';
-import EventPage from './Events/EventPage';
+import EventPage from './Events/EventPage/EventPage';
 import AddEventPage from './Events/EventComponent/AddEvent';
 
 

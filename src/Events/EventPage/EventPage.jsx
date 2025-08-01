@@ -1,7 +1,7 @@
 import { Search, Calendar, List, SquarePen, ArrowDown } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Layout from "../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 
 
 export default function EventPage() {
