@@ -6,7 +6,7 @@ export default function Layout({ children, activeTab }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-100">
       {/* Mobile toggle icon */}
       <button
         onClick={() => setSidebarOpen(true)}

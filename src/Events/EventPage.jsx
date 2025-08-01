@@ -1,9 +1,12 @@
 import { Search, Calendar, List, SquarePen, ArrowDown } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
 
 
 export default function EventPage() {
+
+  const navigate = useNavigate();
 
   const events = [
     {
@@ -195,10 +198,14 @@ export default function EventPage() {
   const numberOfPages = Math.ceil(events.length / itemsPerPage);
 
   function handleNextClick() {
-    setCurrentPage((prev) => prev + 1)
+    if(currentPage < numberOfPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
   }
   function handlePreviousClick() {
-    setCurrentPage((prev) => prev - 1)
+    if(currentPage > 1) {
+      setCurrentPage((prev) => prev - 1)
+    }
   }
 
 
@@ -233,7 +240,9 @@ export default function EventPage() {
                     <div className="bg-white px-6 py-2 cursor-pointer">
                       <Calendar className="text-gray-500 hover:text-gray-600" />
                     </div>
-                    <div className="py-2 px-7 hover:bg-green-700 bg-green-600 cursor-pointer font-medium rounded-md">Add Event</div>
+                    <div className="py-2 px-7 hover:bg-green-700 bg-green-600 cursor-pointer font-medium rounded-md"
+                    onClick={() => navigate("/Events/add")}
+                    >Add Event</div>
                   </div>
                 </div>
               </div>
@@ -311,8 +320,9 @@ export default function EventPage() {
               </div>
             </div>
           </div>
+
+
       </Layout>
     </>
   )
 }
-
