@@ -1,8 +1,20 @@
 import Layout from "../../components/Layout/Layout";
-import { useNavigate } from "react-router-dom";
+
+import { useState } from "react";
+
+import EventModal from "./EventModal";
+
+
 
 export default function AddEventPage() {
-  const navigate = useNavigate();
+
+  const [showModal, setShowModal] = useState(false);
+
+  function handleClick(e) {
+    e.preventDefault();
+    setShowModal(true);
+  }
+
 
   return(
     <>
@@ -62,13 +74,17 @@ export default function AddEventPage() {
                   </div>
                   <div>
                     <button className="py-1 px-4 bg-green-600 border border-green-500 rounded-sm  cursor-pointer hover:bg-green-500"
-                    onClick={() => navigate("/Events")}
+                    onClick={(e) => handleClick(e)}
                     >Add Event</button>
                   </div>
                 </div>
               </form>
             </div>
           </div>
+
+          {showModal && (
+              <EventModal setShowModal={setShowModal} />
+          )}
       </Layout>
     </>
   )
