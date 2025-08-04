@@ -58,7 +58,7 @@ const CalendarGrid = ({ events, onDateSelect }) => {
       return (
         <div
           key={date.toISOString()}
-          className={`p-2 rounded cursor-pointer
+          className={`px-2 py-1 rounded cursor-pointer
           ${
             !isCurrentMonth && 'text-gray-400'
           }
@@ -72,6 +72,22 @@ const CalendarGrid = ({ events, onDateSelect }) => {
       );
     })}
 
+      </div>
+
+      <div className='mt-8'>
+        <h1 className='font-bold text-sm mb-4'>Event Colors</h1>
+        <div className='flex gap-2 mb-3 items-center'>
+          <div className='w-4 h-4 bg-green-600 rounded-full'></div>
+          <p className='font-medium text-sm'>Present Event</p>
+        </div>
+        <div className='flex gap-2 mb-3 items-center'>
+          <div className='w-4 h-4 bg-purple-600 rounded-full'></div>
+          <p className='font-medium text-sm'>Upcoming Event</p>
+        </div>
+        <div className='flex gap-2 mb-3 items-center'>
+          <div className='w-4 h-4 bg-red-600 rounded-full'></div>
+          <p className='font-medium text-sm'>Past Event</p>
+        </div>
       </div>
     </div>
   );
