@@ -1,75 +1,13 @@
 import React, { useState } from 'react';
-import {
-  startOfMonth,
-  endOfMonth,
-  eachDayOfInterval,
-  isSameDay,
-  isSameMonth,
-  startOfWeek,
-  startOfDay,
-  endOfWeek,
-  format,
-} from 'date-fns';
+
 import { useNavigate } from "react-router-dom";
 import { Search, Calendar, List } from "lucide-react";
 
-// 📅 Calendar Grid Component
-const CalendarGrid = ({ currentDate, events, onDateSelect }) => {
-  const monthStart = startOfMonth(currentDate);
-  const monthEnd = endOfMonth(currentDate);
+import CalendarGrid from './CalenderGrid';
 
-  const calendarStart = startOfWeek(monthStart, { weekStartsOn: 0 }); // Sunday
-  const calendarEnd = endOfWeek(monthEnd, { weekStartsOn: 0 });
-
-  const daysToDisplay = eachDayOfInterval({ start: calendarStart, end: calendarEnd });
-
-  return (
-    <div className='w-60 bg-red-200 p-3'>
-
-      <div>
-      
-      </div>
-
-      <div className="grid grid-cols-7 gap-2 mb-2 text-center text-xs font-bold text-gray-600">
-        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, index) => (
-          <div key={index + day}>{day}</div>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-7 gap-2 mb-2 text-center text-xs font-medium">
-      {
-      daysToDisplay.map((date) => {
-        // let isEventDay = events.some(event =>
-        // isSameDay(event.date, format(date, "yyyy-MM-dd"))
-        // );
-        const isCurrentDay = format(date, "yyyy-MM-dd") == format(new Date(), "yyyy-MM-dd");
-        const isCurrentMonth = isSameMonth(date, currentDate);
-
-      return (
-        <div
-          key={date.toISOString()}
-          className={`p-2 rounded cursor-pointer
-          ${
-            !isCurrentMonth && 'text-gray-400'
-          }
-          ${
-            isCurrentDay ? 'bg-green-400 font-bold text-green-800' : ''
-          } rounded-full`}
-          onClick={() => onDateSelect(date)}
-        >
-          {format(date, 'd')}
-        </div>
-      );
-    })}
-
-      </div>
-    </div>
-  );
-};
 
 // 📆 Main Page Component
 export default function EventCalendar() {
-  const [currentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const navigate = useNavigate();
@@ -129,7 +67,6 @@ export default function EventCalendar() {
           <div className='px-3'>
             <div>
               <CalendarGrid
-              currentDate={currentDate}
               events={events}
               onDateSelect={setSelectedDate}
             />
