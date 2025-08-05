@@ -23,6 +23,10 @@ export default function MainEvent({events}) {
     }
   }
 
+  function handleCalendarClick() {
+    navigate("/Events/calendar", { state: { events } });
+  }
+
 
   return(
     <>
@@ -51,7 +55,9 @@ export default function MainEvent({events}) {
                     <List className="h-5 w-5"/>
                   </div>
                   <div className="bg-white px-6 py-2 cursor-pointer">
-                    <Calendar className="text-gray-500 hover:text-gray-600" />
+                    <Calendar
+                      className="text-gray-500 hover:text-gray-600"
+                      onClick={handleCalendarClick} />
                   </div>
                   <div className="py-2 px-7 hover:bg-green-700 bg-green-600 cursor-pointer font-medium rounded-md"
                   onClick={() => navigate("/Events/add")}

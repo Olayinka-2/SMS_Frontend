@@ -16,10 +16,7 @@ import {
 
 
 // 📆 Main Page Component
-export default function EventGrid({events}) {
-
-  const [currentDate, setCurrentDate] = useState(new Date());
-
+export default function EventGrid({events, currentDate}) {
 
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
@@ -49,7 +46,7 @@ export default function EventGrid({events}) {
               </div>
 
               <div>
-                <div className="grid grid-cols-7 gap-2 mb-2 text-center text-xs font-medium bg-gray-100 text-gray-900 p-2">
+                <div className="grid grid-cols-7 gap-2 text-center text-xs font-medium bg-gray-100 text-gray-900 p-2 border-y-none border-x-2 border-gray-200">
                   {["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"].map((day, index) => (
                     <div key={index + day}>{day}</div>
                   ))}
@@ -63,6 +60,10 @@ export default function EventGrid({events}) {
                     const matchedEvent = events.find(event =>
                       isSameDay(new Date(event.date), day)
                     );
+
+                    if(matchedEvent) {
+                      console.log(matchedEvent);
+                    }
 
                     let eventColor = "";
                     if (matchedEvent) {

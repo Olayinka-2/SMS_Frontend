@@ -1,4 +1,4 @@
-// import MainEvent from "../EventPage/MainEvent";
+import MainEvent from "../EventComponent/MainEvent/MainEvent";
 import EventCalender from "../EventComponent/EventCalender/EventCalender";
 import Layout from "../../components/Layout/Layout";
 
@@ -9,7 +9,7 @@ export default function EventPage() {
     {
       id: 1,
       title: "School Assembly",
-      date: "2024-05-31",
+      date: "2025-08-31",
       time: "8:00am",
       location: "Auditorium",
       description: "Monthly School assembly for students and staff",
@@ -18,7 +18,7 @@ export default function EventPage() {
     {
       id: 2,
       title: "Mathematics Competition",
-      date: "2024-06-02",
+      date: "2025-08-02",
       time: "10:00am",
       location: "Lecture Hall A",
       description: "Inter-school mathematics challenge",
@@ -193,8 +193,7 @@ export default function EventPage() {
   return(
     <>
       <Layout activeTab = "Events">
-        {/* <MainEvent events={events} /> */}
-        <EventCalender />
+        <MainEvent events={events} />
 
       </Layout>
     </>

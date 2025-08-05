@@ -31,6 +31,7 @@ import TeachersProfile from './Teachers/TeachersProfile/TeachersProfile';
 import MessagePage from './Messaging/MessagePage/MessagePage';
 import EventPage from './Events/EventPage/EventPage';
 import AddEventPage from './Events/EventComponent/AddEvent/AddEvent';
+import EventCalender from './Events/EventComponent/EventCalender/EventCalender';
 
 
 
@@ -48,7 +49,7 @@ const App = () => {
   const location = useLocation();
 
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
-  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events", "/Events/add",
+  , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events", "/Events/add", "/Events/calendar",
 ];
 
   return (
@@ -85,6 +86,7 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/messaging" element={<MessagePage/>} />
         <Route path="/Events" element={<EventPage/>} />
         <Route path="/Events/add" element={<AddEventPage/>} />
+        <Route path="/Events/calendar" element={<EventCalender/>} />
 
       </Routes>
       {!excludePaths.includes(location.pathname) && <Footer />}
