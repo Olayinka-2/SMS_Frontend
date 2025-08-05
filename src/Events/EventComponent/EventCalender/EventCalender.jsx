@@ -1,14 +1,28 @@
 import React, { useState } from 'react';
 
 import { useNavigate } from "react-router-dom";
-import { Search, Calendar, List } from "lucide-react";
+import { Search, Calendar, List, ChevronLeft, ChevronRight  } from "lucide-react";
 
 import CalendarGrid from './CalenderGrid';
+
+import {
+  startOfMonth,
+  endOfMonth,
+  eachDayOfInterval,
+  isSameMonth,
+  isSameDay,
+  startOfWeek,
+  endOfWeek,
+  format,
+  addMonths
+} from 'date-fns';
+import EventGrid from './EventGrid';
 
 
 // 📆 Main Page Component
 export default function EventCalendar() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const [currentDate, setCurrentDate] = useState(new Date());
 
   const navigate = useNavigate();
 
@@ -28,7 +42,7 @@ export default function EventCalendar() {
   return (
 
     <>
-      <div className="flex flex-col min-h-screen bg-white">
+      <div className="flex flex-col min-h-screen">
         <div className="p-3 bg-white border border-gray-100">
           <div className="flex flex-col gap-4">
             <h1 className="font-bold text-xl">Event</h1>
@@ -64,45 +78,17 @@ export default function EventCalendar() {
 
           </div>
 
-          <div className='px-3'>
-            <div>
+          <div className='p-6 flex bg-white'>
               <CalendarGrid
-              events={events}
-              onDateSelect={setSelectedDate}
+              currentDate={currentDate}
+              setCurrentDate={setCurrentDate}
             />
+
+            <div className="flex-1">
+              <EventGrid events={events} />
             </div>
           </div>
 
-
-
-      <div className="flex gap-8 p-6">
-      {/* Calendar Grid (Left) */}
-
-      {/* Event List (Right) */}
-      {/* <div className="w-1/3 bg-white rounded shadow p-4">
-        <h2 className="text-xl font-bold mb-4">
-          Events on {format(selectedDate, 'PPP')}
-        </h2>
-        <ul>
-          {events.filter((event) =>
-            isSameDay(new Date(event.date), selectedDate)
-          ).length === 0 ? (
-            <p className="text-gray-500 text-sm">No events for this day.</p>
-          ) : (
-            events
-              .filter((event) =>
-                isSameDay(new Date(event.date), selectedDate)
-              )
-              .map((event, idx) => (
-                <li key={idx} className="mb-2 p-2 border rounded">
-                  <p className="font-medium">{event.title}</p>
-                  <p className="text-sm text-gray-500">{event.time}</p>
-                </li>
-              ))
-          )}
-        </ul>
-      </div> */}
-    </div>
         </div>
 
     </>

@@ -1,8 +1,8 @@
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../../components/Layout/Layout";
 
 import { useState } from "react";
 
-import EventModal from "./EventModal";
+import EventModal from "../MainEvent/EventModal";
 
 
 

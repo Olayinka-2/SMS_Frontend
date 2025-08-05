@@ -1,5 +1,5 @@
-import MainEvent from "../EventComponent/MainEvent";
-import EventCalender from "../EventComponent/EventCalender";
+// import MainEvent from "../EventPage/MainEvent";
+import EventCalender from "../EventComponent/EventCalender/EventCalender";
 import Layout from "../../components/Layout/Layout";
 
 
