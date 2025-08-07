@@ -37,7 +37,7 @@ export default function AttendanceTable() {
               </div>
           </th>
           <th className="text-center text-xs p-2 font-bold">Teacher ID</th>
-          <th className="text-center text-xs p-2 font-bold">Name</th>
+          <th className="text-center text-xs p-2 font-bold">Name </th>
           <th className="text-center text-xs p-2 font-bold">Days Present</th>
           <th className="text-center text-xs p-2 font-bold">Days Absent</th>
           <th className="text-center text-xs p-2 font-bold">Leave</th>
