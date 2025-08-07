@@ -32,7 +32,9 @@ import MessagePage from './Messaging/MessagePage/MessagePage';
 import EventPage from './Events/EventPage/EventPage';
 import AddEventPage from './Events/EventComponent/AddEvent/AddEvent';
 import EventCalender from './Events/EventComponent/EventCalender/EventCalender';
-import FinancePage from './Finance/MainPage/FinancePage'
+import FinancePage from './Finance/MainPage/FinancePage';
+import PaymentHistory from './Finance/FinanceComponent/PaymentHistory/PaymentHistory';
+import StaffSalary from './Finance/FinanceComponent/StaffSalary/StaffSalary';
 
 
 
@@ -51,6 +53,7 @@ const App = () => {
 
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
   , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events", "/Events/add", "/Events/calendar", "/finance",
+  "/finance/paymentHistory", "/finance/staffSalary",
 ];
 
   return (
@@ -84,11 +87,14 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/TeachersDashboard" element={<TeachersDashboard/>} />
         <Route path="/TeachersProfile" element={<TeachersProfile/>} />
 
+
         <Route path="/messaging" element={<MessagePage/>} />
         <Route path="/Events" element={<EventPage/>} />
         <Route path="/Events/add" element={<AddEventPage/>} />
         <Route path="/Events/calendar" element={<EventCalender/>} />
         <Route path="/finance" element={<FinancePage/>} />
+        <Route path="/finance/paymentHistory" element={<PaymentHistory/>} />
+        <Route path="/finance/staffSalary" element={<StaffSalary/>} />
 
       </Routes>
       {!excludePaths.includes(location.pathname) && <Footer />}

@@ -1,7 +1,10 @@
 import Layout from "../../components/Layout/Layout";
 import { UserRoundCheck, Landmark } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function FinancePage() {
+
+  const navigate = useNavigate();
 
   const financeShortCut = [
     "Total Revenue", "Expenses", "Pending Payment", "Upcoming Payroll", "All Invoices", "Paid Invoices",
@@ -10,7 +13,7 @@ export default function FinancePage() {
 
   return(
     <>
-      <Layout activeTab = "finance">
+      <Layout activeTab = "Finance">
         <div className="min-h-screen">
           <div className="bg-white flex justify-between items-center p-3 mb-5">
               <div className="text-3xl font-bold">
@@ -25,13 +28,17 @@ export default function FinancePage() {
           <div className="bg-white p-3">
             <h2 className="font-medium mb-3">Quick Links</h2>
             <div className="flex gap-3">
-            <div className="flex-1 border border-green-400 rounded-sm p-3">
+            <div className="flex-1 border border-green-400 rounded-sm p-3 cursor-pointer"
+            onClick={() => navigate("/finance/paymentHistory")}
+            >
                 <div className="flex gap-2 items-center justify-center">
                   <UserRoundCheck className="w-9 h-9 bg-green-200 p-2 border-2 border-green-600 rounded-full text-green-600"/>
                   <p className="text-gray-800">Payment History</p>
                 </div>
               </div>
-              <div className="flex-1 border border-green-400 rounded-sm p-3">
+
+              <div className="flex-1 border border-green-400 rounded-sm p-3 cursor-pointer"
+              onClick={() => navigate("/finance/staffSalary")}>
                 <div className="flex gap-2 items-center justify-center">
                   <UserRoundCheck className="w-9 h-9 bg-green-200 p-2 border-2 border-green-600 rounded-full text-green-600"/>
                   <p className="text-gray-800">Staff Salaries</p>

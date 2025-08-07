@@ -19,7 +19,7 @@ export default function AddEventPage() {
   return(
     <>
       <Layout activeTab = "Events">
-        <div className="flex flex-col f-full">
+        <div className="flex flex-col">
             <div className="p-4 rounded bg-white flex justify-between items-center border border-gray-100">
               <h1 className="font-bold text-2xl">Add Event</h1>
               <div className="flex gap-4 items-center">
