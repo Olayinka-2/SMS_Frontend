@@ -137,6 +137,7 @@ export default function StaffSalary() {
 
                       <div className="flex justify-between items-center">
                         <button className="py-1 px-5 text-green-500 border border-green-500 rounded cursor-pointer hover:bg-green-500 hover:text-white"
+                        type="button"
                         >Process Salary</button>
                         <button className="py-1 px-4 bg-green-600 border border-green-500 rounded-sm  cursor-pointer hover:bg-green-500"
                         onClick={(e) => handleClick(e)}

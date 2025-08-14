@@ -88,7 +88,7 @@ export default function StaffSalary() {
                       </div>
                       <div>
                         <button className="py-1 px-4 bg-green-600 border border-green-500 rounded-sm  cursor-pointer hover:bg-green-500"
-                        onClick={(e) => handleClick(e)}
+                        type="button"
                         >Process Salary</button>
                       </div>
                     </div>

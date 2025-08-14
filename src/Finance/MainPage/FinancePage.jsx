@@ -46,7 +46,7 @@ export default function FinancePage() {
                   <p className="text-gray-800">Staff Salaries</p>
                 </div>
               </div>
-              <div className="flex-1 border border-green-400 rounded-sm p-3"
+              <div className="flex-1 border border-green-400 rounded-sm p-3 cursor-pointer"
               onClick={() => navigate("/finance/invoice")}
               >
                 <div className="flex gap-2 items-center justify-center">

@@ -39,7 +39,7 @@ export default function StaffSalary() {
                 Staff Attendance
               </button>
               <button
-                className="px-4 py-2 bg-green-500 rounded hover:bg-green-600 w-32 text-gray-900 cursor-pointer ml-auto"
+                className="px-4 py-2 bg-green-600 rounded hover:bg-green-500 w-32 text-gray-900 cursor-pointer ml-auto"
                 onClick={() => navigate("/finance/staffSalary/paySalary")}
                 >
                   Pay Salary
