@@ -427,4 +427,28 @@ const teacherAttendance = [
   { id: 20, teacherId: "T020", name: "Bola Salami", daysPresent: 23, daysAbsent: 0, leave: 0 },
 ];
 
-export {paymentData, teacherPayments, teacherAttendance};
+const invoiceData = [
+  { id: 1, invoiceId: "INV-001", invoicedTo: "John Doe", dueDate: "2025-08-20", amount: "$500", createdOn: "2025-08-01", status: "Paid" },
+  { id: 2, invoiceId: "INV-002", invoicedTo: "Jane Smith", dueDate: "2025-08-18", amount: "$350", createdOn: "2025-07-28", status: "Overdue" },
+  { id: 3, invoiceId: "INV-003", invoicedTo: "Michael Brown", dueDate: "2025-08-25", amount: "$450", createdOn: "2025-08-05", status: "Cancelled" },
+  { id: 4, invoiceId: "INV-004", invoicedTo: "Sarah Johnson", dueDate: "2025-08-30", amount: "$600", createdOn: "2025-08-10", status: "Paid" },
+  { id: 5, invoiceId: "INV-005", invoicedTo: "Chris Evans", dueDate: "2025-09-02", amount: "$700", createdOn: "2025-08-15", status: "Overdue" },
+  { id: 6, invoiceId: "INV-006", invoicedTo: "Emily Davis", dueDate: "2025-08-22", amount: "$250", createdOn: "2025-08-03", status: "Paid" },
+  { id: 7, invoiceId: "INV-007", invoicedTo: "David Wilson", dueDate: "2025-08-29", amount: "$800", createdOn: "2025-08-09", status: "Cancelled" },
+  { id: 8, invoiceId: "INV-008", invoicedTo: "Sophia Martinez", dueDate: "2025-09-05", amount: "$400", createdOn: "2025-08-17", status: "Paid" },
+  { id: 9, invoiceId: "INV-009", invoicedTo: "Liam Anderson", dueDate: "2025-08-27", amount: "$550", createdOn: "2025-08-07", status: "Overdue" },
+  { id: 10, invoiceId: "INV-010", invoicedTo: "Olivia Thomas", dueDate: "2025-09-08", amount: "$300", createdOn: "2025-08-20", status: "Paid" },
+  { id: 11, invoiceId: "INV-011", invoicedTo: "William Taylor", dueDate: "2025-09-01", amount: "$900", createdOn: "2025-08-14", status: "Overdue" },
+  { id: 12, invoiceId: "INV-012", invoicedTo: "Isabella Moore", dueDate: "2025-09-04", amount: "$650", createdOn: "2025-08-18", status: "Cancelled" },
+  { id: 13, invoiceId: "INV-013", invoicedTo: "James Harris", dueDate: "2025-08-23", amount: "$200", createdOn: "2025-08-02", status: "Paid" },
+  { id: 14, invoiceId: "INV-014", invoicedTo: "Ava Clark", dueDate: "2025-08-31", amount: "$450", createdOn: "2025-08-11", status: "Overdue" },
+  { id: 15, invoiceId: "INV-015", invoicedTo: "Benjamin Lewis", dueDate: "2025-09-03", amount: "$780", createdOn: "2025-08-16", status: "Paid" },
+  { id: 16, invoiceId: "INV-016", invoicedTo: "Mia Walker", dueDate: "2025-09-06", amount: "$320", createdOn: "2025-08-19", status: "Cancelled" },
+  { id: 17, invoiceId: "INV-017", invoicedTo: "Ethan Hall", dueDate: "2025-08-26", amount: "$410", createdOn: "2025-08-06", status: "Paid" },
+  { id: 18, invoiceId: "INV-018", invoicedTo: "Charlotte Allen", dueDate: "2025-09-07", amount: "$510", createdOn: "2025-08-21", status: "Overdue" },
+  { id: 19, invoiceId: "INV-019", invoicedTo: "Henry Young", dueDate: "2025-08-28", amount: "$290", createdOn: "2025-08-08", status: "Paid" },
+  { id: 20, invoiceId: "INV-020", invoicedTo: "Amelia King", dueDate: "2025-09-09", amount: "$600", createdOn: "2025-08-22", status: "Cancelled" },
+];
+
+
+export {paymentData, teacherPayments, teacherAttendance, invoiceData};

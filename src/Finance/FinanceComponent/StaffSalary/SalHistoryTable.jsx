@@ -79,7 +79,8 @@ export default function SalTable() {
               `}>
                 <span className={`px-2 py-1 rounded-xl
                                 ${data.status === "Paid" && "text-green-500 bg-green-100"}
-                                ${data.status === "Unpaid" && "text-red-500 bg-red-100"}`}>
+                                ${data.status === "Unpaid" && "text-red-500 bg-red-100"}
+                                ${data.status === "Pending" && "text-yellow-500 bg-yellow-100"}`}>
                   {data.status}
                 </span>
               </td>

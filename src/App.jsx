@@ -35,6 +35,9 @@ import EventCalender from './Events/EventComponent/EventCalender/EventCalender';
 import FinancePage from './Finance/MainPage/FinancePage';
 import PaymentHistory from './Finance/FinanceComponent/PaymentHistory/PaymentHistory';
 import StaffSalary from './Finance/FinanceComponent/StaffSalary/StaffSalary';
+import PaySalary from './Finance/FinanceComponent/StaffSalary/PaySalary';
+import GenerateInvoice from './Finance/FinanceComponent/Invoices/GenerateInvoice';
+import Invoice from './Finance/FinanceComponent/Invoices/Invoices';
 
 
 
@@ -53,7 +56,8 @@ const App = () => {
 
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
   , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events", "/Events/add", "/Events/calendar", "/finance",
-  "/finance/paymentHistory", "/finance/staffSalary",
+  "/finance/paymentHistory", "/finance/staffSalary", "/finance/staffSalary/paySalary", "/finance/generateInvoice",
+  "/finance/invoice",
 ];
 
   return (
@@ -95,6 +99,9 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/finance" element={<FinancePage/>} />
         <Route path="/finance/paymentHistory" element={<PaymentHistory/>} />
         <Route path="/finance/staffSalary" element={<StaffSalary/>} />
+        <Route path="/finance/staffSalary/paySalary" element={<PaySalary/>} />
+        <Route path="/finance/generateInvoice" element={<GenerateInvoice />} />
+        <Route path="/finance/invoice" element={<Invoice />} />
 
       </Routes>
       {!excludePaths.includes(location.pathname) && <Footer />}
