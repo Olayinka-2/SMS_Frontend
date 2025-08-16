@@ -85,40 +85,30 @@ export default function NoticeBoard() {
 
             </div>
 
-            <div className="w-80  border border-gray-200 rounded bg-white p-3">
+            <div className="w-80  border border-gray-200 rounded bg-white p-3 overflow-y-scroll"
+            style={
+              {
+                "height": "calc(100vh - 10rem)"
+              }
+            }
+            >
               <p className="font-medium mb-5">Upcoming Events</p>
 
               <div className="flex flex-col gap-2">
-                <div className=" flex items-center gap-5">
-                  <div className="bg-pink-300 py-5 px-3 rounded-lg text-center">
-                    <p className="font-medium">Feb</p>
-                    <p className="font-medium">7</p>
+                {
+                  arrayLength.slice(0,3).map(element => (
+                    <div className=" flex items-center gap-5">
+                    <div className="bg-pink-300 py-5 px-3 rounded-lg text-center">
+                      <p className="font-medium">Feb</p>
+                      <p className="font-medium">7</p>
+                    </div>
+                    <div className="text-xs overflow-hidden">
+                      <p className="font-medium text-nowrap text-ellipsis">Monthly School assembly for all student and teachers</p>
+                      <p className="text-gray-400">Auditorium</p>
+                    </div>
                   </div>
-                  <div className="text-xs overflow-hidden">
-                    <p className="font-medium text-nowrap text-ellipsis">Monthly School assembly for all student and teachers</p>
-                    <p className="text-gray-400">Auditorium</p>
-                  </div>
-                </div>
-                <div className=" flex items-center gap-5">
-                  <div className="bg-pink-300 py-5 px-3 rounded-lg text-center">
-                    <p className="font-medium">Feb</p>
-                    <p className="font-medium">7</p>
-                  </div>
-                  <div className="text-xs overflow-hidden">
-                    <p className="font-medium text-nowrap text-ellipsis">Monthly School assembly for all student and teachers</p>
-                    <p className="text-gray-400">Auditorium</p>
-                  </div>
-                </div>
-                <div className=" flex items-center gap-5">
-                  <div className="bg-pink-300 py-5 px-3 rounded-lg text-center">
-                    <p className="font-medium">Feb</p>
-                    <p className="font-medium">7</p>
-                  </div>
-                  <div className="text-xs overflow-hidden">
-                    <p className="font-medium text-nowrap text-ellipsis">Monthly School assembly for all student and teachers</p>
-                    <p className="text-gray-400">Auditorium</p>
-                  </div>
-                </div>
+                  ))
+                }
               </div>
             </div>
           </div>
