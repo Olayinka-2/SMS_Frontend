@@ -39,6 +39,7 @@ import PaySalary from './Finance/FinanceComponent/StaffSalary/PaySalary';
 import GenerateInvoice from './Finance/FinanceComponent/Invoices/GenerateInvoice';
 import Invoice from './Finance/FinanceComponent/Invoices/Invoices';
 import NoticeBoard from './noticeBoard/MainPage/NoticeBoard';
+import NewItem from './noticeBoard/NoticeBoardComponent/NewItem';
 
 
 
@@ -58,7 +59,7 @@ const App = () => {
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
   , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events", "/Events/add", "/Events/calendar", "/finance",
   "/finance/paymentHistory", "/finance/staffSalary", "/finance/staffSalary/paySalary", "/finance/generateInvoice",
-  "/finance/invoice", "/notice-board",
+  "/finance/invoice", "/notice-board", "/notice-board/newItem"
 ];
 
   return (
@@ -103,7 +104,8 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/finance/staffSalary/paySalary" element={<PaySalary/>} />
         <Route path="/finance/generateInvoice" element={<GenerateInvoice />} />
         <Route path="/finance/invoice" element={<Invoice />} />
-        <Route path="//notice-board" element={<NoticeBoard />} />
+        <Route path="/notice-board" element={<NoticeBoard />} />
+        <Route path="/notice-board/newItem" element={<NewItem />} />
 
       </Routes>
       {!excludePaths.includes(location.pathname) && <Footer />}

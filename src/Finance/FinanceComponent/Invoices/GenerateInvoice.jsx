@@ -14,6 +14,7 @@ export default function StaffSalary() {
     e.preventDefault();
     setShowModal(true);
   }
+  
 
   const navigate = useNavigate();
 

@@ -5,7 +5,8 @@ import Tutor from "../../assets/Tutor2.png";
 
 export default function NoticeBoard() {
 
-  const arrayLength = [1,2,3,4,5]
+  const arrayLength = [1,2,3,4,5];
+  const navigate = useNavigate();
 
   return(
     <>
@@ -29,7 +30,8 @@ export default function NoticeBoard() {
                   </div>
 
                   <div>
-                    <button className="px-4 py-2 bg-green-500 rounded hover:bg-green-600 w-full text-gray-800 font-base"
+                    <button className="px-4 py-2 bg-green-500 rounded hover:bg-green-600 w-full text-gray-800 font-base cursor-pointer"
+                    onClick={() => navigate("/notice-board/newItem")}
                     >
                       New Item
                     </button>
