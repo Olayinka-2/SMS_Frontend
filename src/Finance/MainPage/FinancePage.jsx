@@ -20,7 +20,7 @@ export default function FinancePage() {
                 Financial Management
               </div>
               <div>
-                <button className="px-4 py-2 bg-green-600 rounded hover:bg-green-700 w-full text-gray-800 font-medium"
+                <button className="px-4 py-2 bg-green-600 rounded hover:bg-green-700 w-full text-gray-800 font-medium cursor-pointer"
                 onClick={() => navigate("/finance/generateInvoice")}
                 >
                   Generate Invoice
