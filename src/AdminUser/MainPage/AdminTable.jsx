@@ -91,7 +91,9 @@ export default function AdminTable({admin}) {
                     <td className="text-center px-2 py-5 text-xs text-gray-600 border border-white border-r-gray-100">
                       <div className="flex justify-center items-center gap-3 cursor-pointer">
                         <SquarePen className="w-5 h-5" />
-                        <button className="text-green-500 border border-green-500 rounded-md hover:bg-green-500 hover:text-white py-1 px-4 cursor-pointer">
+                        <button className="text-green-500 border border-green-500 rounded-md hover:bg-green-500 hover:text-white py-1 px-4 cursor-pointer"
+                        onClick={() => navigate("/admin-profile", { state: { admin: adminItem } })}
+                        >
                           View
                         </button>
                       </div>

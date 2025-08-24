@@ -1,8 +1,19 @@
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../../components/Layout/Layout";
 import { useNavigate } from "react-router-dom";
-import { admin } from "../AdminData";
+import { admin } from "../../AdminData";
+import { useState } from "react";
+
+import AddAdminModal from "./AddAdminModal";
 
 export default function AddAdminUser() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  function handleClick(e) {
+    e.preventDefault();
+    setShowModal(true);
+  }
+
 
   const navigate = useNavigate();
 
@@ -85,6 +96,7 @@ export default function AddAdminUser() {
                         >Add Module Permission</button>
                         <button className="py-2 px-5 bg-green-500 border border-green-500 rounded-sm  cursor-pointer hover:bg-green-600"
                         type="button"
+                        onClick={handleClick}
                         >Add User</button>
                       </div>
                     </div>
@@ -94,6 +106,9 @@ export default function AddAdminUser() {
               </div>
           </div>
         </div>
+        {showModal && (
+              <AddAdminModal setShowModal={setShowModal} />
+          )}
       </Layout>
     </>
   )

@@ -6,6 +6,7 @@ const admin = [
     email: "jdoe@example.com",
     role: "HR Admin",
     status: "Active",
+    phone: "+1-555-123-4567",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const admin = [
     email: "asmith@example.com",
     role: "Finance Admin",
     status: "Inactive",
+    phone: "+1-555-234-5678",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const admin = [
     email: "bwayne@example.com",
     role: "Teachers Admin",
     status: "Active",
+    phone: "+1-555-345-6789",
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ const admin = [
     fullName: "Clark Kent",
     email: "ckent@example.com",
     role: "Parents Admin",
-    status: "Inactive", // changed from Pending
+    status: "Inactive",
+    phone: "+1-555-456-7890",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const admin = [
     email: "dprince@example.com",
     role: "Students Admin",
     status: "Active",
+    phone: "+1-555-567-8901",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const admin = [
     email: "pparker@example.com",
     role: "Messaging Admin",
     status: "Active",
+    phone: "+1-555-678-9012",
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ const admin = [
     email: "tstark@example.com",
     role: "Events Admin",
     status: "Inactive",
+    phone: "+1-555-789-0123",
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ const admin = [
     email: "sscott@example.com",
     role: "Notice Board Admin",
     status: "Active",
+    phone: "+1-555-890-1234",
   },
   {
     id: 9,
@@ -69,7 +77,8 @@ const admin = [
     fullName: "Barry Williams",
     email: "bwilliams@example.com",
     role: "School Calendar Admin",
-    status: "Inactive", // changed from Pending
+    status: "Inactive",
+    phone: "+1-555-901-2345",
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ const admin = [
     email: "sjobs@example.com",
     role: "Subjects Admin",
     status: "Active",
+    phone: "+1-555-012-3456",
   },
   {
     id: 11,
@@ -86,6 +96,7 @@ const admin = [
     email: "bgates@example.com",
     role: "CMS Admin",
     status: "Active",
+    phone: "+1-555-234-1111",
   },
   {
     id: 12,
@@ -94,6 +105,7 @@ const admin = [
     email: "eclark@example.com",
     role: "Admin Users Admin",
     status: "Inactive",
+    phone: "+1-555-222-1111",
   },
   {
     id: 13,
@@ -102,6 +114,7 @@ const admin = [
     email: "mjackson@example.com",
     role: "Dashboard Admin",
     status: "Active",
+    phone: "+1-555-333-1111",
   },
   {
     id: 14,
@@ -110,6 +123,7 @@ const admin = [
     email: "tkim@example.com",
     role: "HR Admin",
     status: "Active",
+    phone: "+1-555-444-1111",
   },
   {
     id: 15,
@@ -117,7 +131,8 @@ const admin = [
     fullName: "Ravi Patel",
     email: "rpatel@example.com",
     role: "Finance Admin",
-    status: "Inactive", // changed from Pending
+    status: "Inactive",
+    phone: "+1-555-555-1111",
   },
   {
     id: 16,
@@ -126,6 +141,7 @@ const admin = [
     email: "lkhan@example.com",
     role: "Teachers Admin",
     status: "Active",
+    phone: "+1-555-666-1111",
   },
   {
     id: 17,
@@ -134,6 +150,7 @@ const admin = [
     email: "slee@example.com",
     role: "Parents Admin",
     status: "Active",
+    phone: "+1-555-777-1111",
   },
   {
     id: 18,
@@ -142,6 +159,7 @@ const admin = [
     email: "ahassan@example.com",
     role: "Students Admin",
     status: "Inactive",
+    phone: "+1-555-888-1111",
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ const admin = [
     email: "jwilson@example.com",
     role: "Messaging Admin",
     status: "Active",
+    phone: "+1-555-999-1111",
   },
   {
     id: 20,
@@ -157,7 +176,8 @@ const admin = [
     fullName: "Carlos Garcia",
     email: "cgarcia@example.com",
     role: "Events Admin",
-    status: "Inactive", // changed from Pending
+    status: "Inactive",
+    phone: "+1-555-000-1111",
   },
 ];
 
