@@ -16,7 +16,7 @@ import {
 
 
 // 📆 Main Page Component
-export default function EventGrid({events, currentDate}) {
+export default function EventGrid({events, currentDate, setCurrentDate}) {
 
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
@@ -26,6 +26,14 @@ export default function EventGrid({events, currentDate}) {
 
   const daysToDisplay = eachDayOfInterval({ start: calendarStart, end: calendarEnd });
 
+  function handleNextClick() {
+    setCurrentDate(prev => addMonths(prev, 1));
+  }
+
+  function handleBackClick() {
+    setCurrentDate(prev => addMonths(prev, -1));
+  }
+
   return (
 
     <>
@@ -34,8 +42,8 @@ export default function EventGrid({events, currentDate}) {
                   <div className='text-2xl font-medium'>{format(currentDate, "MMMM yyyy")}</div>
                   <div className='p-1 shadow-lg text-xs font-medium w-min rounded-md'>{format(currentDate, "EEEE")}</div>
                   <div className='flex gap-2 items-center'>
-                    <ChevronLeft className='cursor-pointer'/>
-                    <ChevronRight  className='cursor-pointer'/>
+                    <ChevronLeft className='cursor-pointer' onClick={handleBackClick} />
+                    <ChevronRight  className='cursor-pointer' onClick={handleNextClick} />
                   </div>
                 </div>
                 <div className='flex gap-2 bg-gray-100 p-1 rounded'>

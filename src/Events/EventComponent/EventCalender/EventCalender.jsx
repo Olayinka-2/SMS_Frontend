@@ -8,6 +8,7 @@ import CalendarGrid from './CalenderGrid';
 import EventGrid from './EventGrid';
 
 export default function EventCalendar() {
+
   const [currentDate, setCurrentDate] = useState(new Date());
   const navigate = useNavigate();
   const location = useLocation();
@@ -16,6 +17,7 @@ export default function EventCalendar() {
   const handleDateSelect = (selectedDate) => {
     setCurrentDate(selectedDate);
   };
+
 
   return (
     <Layout activeTab="Events">
@@ -65,7 +67,7 @@ export default function EventCalendar() {
             />
 
             <div className="flex-1 ml-5">
-              <EventGrid events={events} currentDate={currentDate} />
+              <EventGrid events={events} currentDate={currentDate} setCurrentDate={setCurrentDate} />
             </div>
           </div>
         </div>
