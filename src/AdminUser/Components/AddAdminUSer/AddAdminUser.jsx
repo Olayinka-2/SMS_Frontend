@@ -14,7 +14,6 @@ export default function AddAdminUser() {
     setShowModal(true);
   }
 
-
   const navigate = useNavigate();
 
   return(
@@ -93,6 +92,7 @@ export default function AddAdminUser() {
                       <div className="flex justify-between items-center">
                         <button className="py-2 px-8 border border-green-500 text-green-500 rounded-sm  cursor-pointer hover:bg-green-500 hover:text-white"
                         type="button"
+                        onClick={() => navigate("/module-permission")}
                         >Add Module Permission</button>
                         <button className="py-2 px-5 bg-green-500 border border-green-500 rounded-sm  cursor-pointer hover:bg-green-600"
                         type="button"

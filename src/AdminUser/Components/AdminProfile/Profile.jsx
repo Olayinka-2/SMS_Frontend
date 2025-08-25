@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ProfileOverview from "./ProfileOverview";
 import AccessPermission from "./AccessPermission";
-// import { admin } from "../../AdminData";
+import ActivityLog from "./ActivityLog";
 
 export default function Profile() {
 
@@ -74,6 +74,9 @@ export default function Profile() {
             }
             {
               profileTab === tabs[1] && <AccessPermission/>
+            }
+            {
+              profileTab === tabs[2] && <ActivityLog/>
             }
 
           </div>

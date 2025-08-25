@@ -43,6 +43,7 @@ import NewItem from './noticeBoard/NoticeBoardComponent/NewItem';
 import AdminUser from './AdminUser/MainPage/AdminPage';
 import AddAdminUser from './AdminUser/Components/AddAdminUSer/AddAdminUser';
 import Profile from './AdminUser/Components/AdminProfile/Profile';
+import AddModulePermission from './AdminUser/Components/AddAdminUSer/AddModulePermission';
 
 
 
@@ -62,7 +63,8 @@ const App = () => {
 const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermission", "/ActivityLog", "/DashboardSettings", "/HrDashboard"
   , "/Leavepermission", "/StaffAttendance", "/AdmissionManagement", "/StudentInfo", "/ParentGuardian" , "/TeachersDashboard", "/TeachersProfile", "/messaging", "/Events", "/Events/add", "/Events/calendar", "/finance",
   "/finance/paymentHistory", "/finance/staffSalary", "/finance/staffSalary/paySalary", "/finance/generateInvoice",
-  "/finance/invoice", "/notice-board", "/notice-board/newItem", "/admin-users", "/add-admin-users", "/admin-profile"
+  "/finance/invoice", "/notice-board", "/notice-board/newItem", "/admin-users", "/add-admin-users", "/admin-profile",
+  "/module-permission",
 ];
 
   return (
@@ -112,6 +114,7 @@ const excludePaths = ["/login", "/dashboard", "/Adminprofile", "/AccessPermissio
         <Route path="/admin-users" element={<AdminUser />} />
         <Route path="/add-admin-users" element={<AddAdminUser />} />
         <Route path="/admin-profile" element={<Profile />} />
+        <Route path="/module-permission" element={<AddModulePermission />} />
 
       </Routes>
       {!excludePaths.includes(location.pathname) && <Footer />}

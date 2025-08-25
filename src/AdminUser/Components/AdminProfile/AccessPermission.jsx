@@ -1,6 +1,12 @@
 import { Search, Calendar, List, SquarePen, ArrowDown } from "lucide-react";
 import { useState } from "react";
 
+// const moduleList = [
+//   "Dashboard", "HR", "Teachers", "Parents", "Students",
+//   "Messaging", "Events", "Finance", "Notice Board",
+//   "School Calendar", "Subjects", "CMS", "Admin Users"
+// ];
+
 export default function AccessPermission() {
 
   const module = ["Dashboard", "HR", "Teachers", "Parents", "Students", "Messaging", "Events", "Finance", "Notice Board", "School Calender", "Subjects", "CMS", "Admin Users"];
@@ -18,7 +24,7 @@ export default function AccessPermission() {
         <tbody>
           {module.map((data, index) => (
             <tr
-              key={data.id}
+              key={index}
               className={`border ${
                 index % 2 === 0 && "bg-gray-100"
               }`}
