@@ -3,7 +3,7 @@ import React from 'react';
 import {
   startOfMonth,
   endOfMonth,
-  eachDayOfInterval,
+  eachDayOfInterval, 
   isSameMonth,
   startOfWeek,
   endOfWeek,
