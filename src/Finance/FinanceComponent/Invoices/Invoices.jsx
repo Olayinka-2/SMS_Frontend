@@ -23,8 +23,8 @@ export default function PaymentHistory() {
                 </div>
             </div>
             <div>
-                <div className="flex items-center justify-between py-1 bg-white">
-                  <div className="relative w-80">
+                <div className="flex flex-col lg:flex-row justify-between lg:items-center py-1 bg-white">
+                  <div className="relative w-full lg:w-80">
                     <input
                       type="text"
                       placeholder="Search..."
@@ -33,32 +33,47 @@ export default function PaymentHistory() {
                     <Search className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 h-5 w-5" />
                   </div>
 
+                <div className="flex flex-row md:items-center justify-between gap-2 py-2 bg-white">
+
                   <div className="flex items-center gap-2">
-                    <label htmlFor="session">Session</label>
-                    <select className="border border-gray-300 text-sm px-3 py-1 rounded-md focus:outline-none" id="session">
+                    <label htmlFor="session" className="text-sm">Session</label>
+                    <select
+                      className="border border-gray-300 text-sm px-3 py-1 rounded-md focus:outline-none"
+                      id="session"
+                    >
                       <option value="2024-2025">2024 / 2025</option>
                       <option value="2025-2026">2025 / 2026</option>
                       <option value="2026-2027">2026 / 2027</option>
                     </select>
                   </div>
 
+
                   <div className="flex items-center gap-2">
-                    <label htmlFor="term">Term</label>
-                    <select className="border border-gray-300 text-sm px-3 py-1 rounded-md focus:outline-none" id="term">
+                    <label htmlFor="term" className="text-sm">Term</label>
+                    <select
+                      className="border border-gray-300 text-sm px-3 py-1 rounded-md focus:outline-none"
+                      id="term"
+                    >
                       <option value="1st">1st Term</option>
                       <option value="2nd">2nd Term</option>
                       <option value="3rd">3rd Term</option>
                     </select>
                   </div>
 
+
                   <div className="flex items-center gap-2">
-                    <label htmlFor="Payment-status">Payment Status</label>
-                    <select className="border border-gray-300 text-sm px-3 py-1 rounded-md focus:outline-none" id="Payment-status">
+                    <label htmlFor="Payment-status" className="text-sm">Payment Status</label>
+                    <select
+                      className="border border-gray-300 text-sm px-3 py-1 rounded-md focus:outline-none"
+                      id="Payment-status"
+                    >
                       <option value="all">All</option>
                       <option value="paid">Paid</option>
                       <option value="unpaid">Unpaid</option>
                     </select>
                   </div>
+                </div>
+
                 </div>
             </div>
             <InvoiceTable />
