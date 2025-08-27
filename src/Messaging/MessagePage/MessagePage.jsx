@@ -63,23 +63,26 @@ export default function MessagePage() {
   return(
     <>
       <Layout activeTab = "messaging">
-        <div className="flex min-h-screen bg-white">
-
-          <MessageList users = {users} setSelectedUser={setSelectedUser} selectedUser={selectedUser}/>
-          <div className="flex-1 flex flex-col h-screen">
-            <MessageHeader />
-
-            <div className="border border-gray-200 flex-1 flex flex-col">
-
-              {
-                selectedUser ?
-                  <Messages userMessages = {userMessages} selectedUser={selectedUser} /> :
-                  <StartConversation />
-              }
-
-            </div>
-          </div>
+      <div className="flex min-h-screen bg-white flex-col lg:flex-row">
+        <div className={`${selectedUser ? "hidden lg:block" : "block"} lg:w-80 border-r border-gray-200`}>
+          <MessageList users={users} setSelectedUser={setSelectedUser} selectedUser={selectedUser}/>
         </div>
+
+        {/* Chat Section */}
+        <div className={`${selectedUser ? "flex" : "hidden lg:flex"} flex-1 flex-col h-screen`}>
+          {selectedUser ? (
+            <>
+              <MessageHeader selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>
+              <div className="border-t border-gray-200 flex-1 flex flex-col">
+                <Messages userMessages={userMessages} selectedUser={selectedUser}/>
+              </div>
+            </>
+          ) : (
+            <StartConversation />
+          )}
+        </div>
+      </div>
+
       </Layout>
     </>
   )

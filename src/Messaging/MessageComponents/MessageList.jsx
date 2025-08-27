@@ -8,46 +8,44 @@ const MessageList = ({users, setSelectedUser, selectedUser}) => {
 
   return(
     <>
-       <div className="py-5 pl-5 pr-3 border border-gray-200 w-80 h-screen flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">Messaging</h1>
+      <div className="p-4 h-full flex flex-col gap-4">
+        <h1 className="text-2xl font-bold md:text-3xl">Messaging</h1>
 
-            <div className="flex gap-4 items-center">
-              <p className="text-lg font-medium">PERSONAL MESSAGES</p>
-              <Search className="w-6 h-6 text-green-500 cursor-pointer" />
-              <CirclePlus className="w-6 h-6 text-green-500 cursor-pointer" />
-            </div>
+        <div className="flex gap-3 items-center flex-wrap">
+          <p className="text-base sm:text-lg font-medium">PERSONAL MESSAGES</p>
+          <Search className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 cursor-pointer" />
+          <CirclePlus className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 cursor-pointer" />
+        </div>
 
-            <div className="relative w-full mx-auto">
-              <input type="text" name="" id=""
-                className="w-full p-1 rounded border border-gray-400 focus:outline-none"
-              />
-            <Search className="w-5 h-5 text-gray-400 absolute top-2 right-3" />
-            </div>
+        <div className="relative w-full">
+          <input
+            type="text"
+            className="w-full py-2 pl-3 pr-8 rounded border border-gray-400 focus:outline-none text-sm"
+            placeholder="Search..."
+          />
+          <Search className="w-5 h-5 text-gray-400 absolute top-2 right-3" />
+        </div>
 
-            <div className="flex flex-col gap-3">
-              {
-                users.map((user) => {
-                  let isSelected;
-                  if(selectedUser) {
-                    isSelected = selectedUser.id == user.id;
-                  }
+        {/* Users */}
+        <div className="flex flex-col gap-2 overflow-y-auto">
+          {users.map((user) => {
+            const isSelected = selectedUser?.id === user.id;
+            return (
+              <div
+                key={user.id}
+                className={`p-2 flex items-center gap-3 cursor-pointer rounded-md transition ${
+                  isSelected ? "bg-green-200" : "hover:bg-gray-100"
+                }`}
+                onClick={() => handleClick(user)}
+              >
+                <img src={user.img} alt="" className="w-10 h-10 rounded-full"/>
+                <p className="font-medium text-sm sm:text-base">{user.name}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
-                  return (
-                      <div className={`py-2 px-3 flex items-center gap-2 cursor-pointer
-                          ${isSelected ? "bg-green-300": ""}
-                        `}
-                          key={user.id}
-                          onClick={() => handleClick(user)}>
-                          <img src={user.img} alt="profile Image" className="block w-10 h-10 rounded-full"/>
-                          <p className="font-medium">{user.name}</p>
-                        </div>
-                  )
-
-                })
-              }
-
-            </div>
-          </div>
     </>
   )
 }
