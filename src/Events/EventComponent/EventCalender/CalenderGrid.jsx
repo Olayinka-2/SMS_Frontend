@@ -3,7 +3,7 @@ import React from 'react';
 import {
   startOfMonth,
   endOfMonth,
-  eachDayOfInterval, 
+  eachDayOfInterval,
   isSameMonth,
   startOfWeek,
   endOfWeek,
@@ -26,40 +26,37 @@ export default function CalendarGrid({ currentDate, setCurrentDate, onDateSelect
 
   function handleBackClick() {
     setCurrentDate(prev => addMonths(prev, -1));
+
   }
 
   return (
-    <div className='w-60'>
-      <div className="flex items-center justify-between mb-4">
-        <ChevronLeft className='cursor-pointer' onClick={handleBackClick} />
-        <div>{format(currentDate, "MMMM yyyy")}</div>
-        <ChevronRight className='cursor-pointer' onClick={handleNextClick} />
-      </div>
+    <div className='lg:w-60 w-full'>
+     <div className="lg:w-60 w-full">
+  <div className="flex items-center justify-between mb-4 text-sm sm:text-base">
+    <ChevronLeft className="cursor-pointer" onClick={handleBackClick} />
+    <div>{format(currentDate, "MMMM yyyy")}</div>
+    <ChevronRight className="cursor-pointer" onClick={handleNextClick} />
+  </div>
 
-      <div className="grid grid-cols-7 gap-2 mb-2 text-center text-xs font-bold text-gray-600">
-        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => <div key={i}>{day}</div>)}
-      </div>
+  {/* Days Header */}
+  <div className="grid grid-cols-7 gap-1 sm:gap-2 mb-2 text-center text-xs sm:text-sm font-bold text-gray-600">
+    {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => <div key={i}>{day}</div>)}
+  </div>
 
-      <div className="grid grid-cols-7 gap-2 mb-2 text-center text-xs font-medium">
-        {daysToDisplay.map((date) => {
-          const isCurrentDay = format(date, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd");
-          const isCurrentMonth = isSameMonth(date, currentDate);
-
-          return (
-            <div
-              key={date.toISOString()}
-              className={`px-2 py-1 cursor-pointer ${
-                !isCurrentMonth && 'text-gray-400'
-              } ${
-                isCurrentDay ? 'bg-green-500 font-medium text-green-800 rounded-full w-6 h-6' : ''
-              }`}
-              onClick={() => onDateSelect(date)}
-            >
-              {format(date, 'd')}
-            </div>
-          );
-        })}
+  {/* Dates */}
+  <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center text-xs sm:text-sm font-medium">
+    {daysToDisplay.map((date) => (
+      <div
+        key={date.toISOString()}
+        className="px-2 py-1 cursor-pointer rounded hover:bg-gray-200 transition"
+        onClick={() => onDateSelect(date)}
+      >
+        {format(date, 'd')}
       </div>
+    ))}
+  </div>
+</div>
+
 
       <div className='mt-8'>
         <h1 className='font-bold text-sm mb-4'>Event Colors</h1>

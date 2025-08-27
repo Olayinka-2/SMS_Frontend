@@ -69,10 +69,6 @@ export default function EventGrid({events, currentDate, setCurrentDate}) {
                       isSameDay(new Date(event.date), day)
                     );
 
-                    if(matchedEvent) {
-                      console.log(matchedEvent);
-                    }
-
                     let eventColor = "";
                     if (matchedEvent) {
                       const eventDate = new Date(matchedEvent.date);
